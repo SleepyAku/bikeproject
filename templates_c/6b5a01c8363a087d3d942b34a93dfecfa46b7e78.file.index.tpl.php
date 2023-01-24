@@ -1,12 +1,35 @@
-<!DOCTYPE html>
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-01-23 08:12:59
+         compiled from ".\templates\index.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:177981980563ceb20b9491e7-93028483%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '6b5a01c8363a087d3d942b34a93dfecfa46b7e78' => 
+    array (
+      0 => '.\\templates\\index.tpl',
+      1 => 1674486884,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '177981980563ceb20b9491e7-93028483',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_63ceb20b9645d1_87527051',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_63ceb20b9645d1_87527051')) {function content_63ceb20b9645d1_87527051($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 
-{include file="head.tpl"}
+<?php echo $_smarty_tpl->getSubTemplate ("head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
 
 <body>
     <div class="page-holder">
         <!-- navbar-->
-        {include file="header.tpl"}
+        <?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
         <!--  Modal -->
 
         <!-- HERO SECTION-->
@@ -128,8 +151,9 @@
             <!-- NEWSLETTER-->
 
         </div>
-        {include file="footer.tpl"}
+        <?php echo $_smarty_tpl->getSubTemplate ("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
     </div>
 </body>
 
-</html>
+</html><?php }} ?>

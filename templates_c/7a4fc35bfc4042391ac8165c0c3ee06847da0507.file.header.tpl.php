@@ -1,4 +1,25 @@
-<header class="header bg-white">
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-01-23 08:12:59
+         compiled from ".\templates\header.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:145993035763ceb20b9724c9-64707181%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '7a4fc35bfc4042391ac8165c0c3ee06847da0507' => 
+    array (
+      0 => '.\\templates\\header.tpl',
+      1 => 1674487022,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '145993035763ceb20b9724c9-64707181',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_63ceb20b972c98_78573374',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_63ceb20b972c98_78573374')) {function content_63ceb20b972c98_78573374($_smarty_tpl) {?><header class="header bg-white">
         <div class="container px-lg-3">
           <nav class="navbar navbar-expand-lg navbar-light py-3 px-lg-0"><a class="navbar-brand" href="index.html"><span class="fw-bold text-uppercase text-dark">Boutique</span></a>
             <button class="navbar-toggler navbar-toggler-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -25,4 +46,4 @@
             </div>
           </nav>
         </div>
-      </header>
+      </header><?php }} ?>

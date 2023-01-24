@@ -1,4 +1,25 @@
-<footer class="bg-dark text-white">
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-01-23 08:12:59
+         compiled from ".\templates\footer.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:134518726163ceb20b9786d0-30830091%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'eb93922a3327546f6c1b40a96d2881f9f921a3ff' => 
+    array (
+      0 => '.\\templates\\footer.tpl',
+      1 => 1674490236,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '134518726163ceb20b9786d0-30830091',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_63ceb20b9792a7_30338035',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_63ceb20b9792a7_30338035')) {function content_63ceb20b9792a7_30338035($_smarty_tpl) {?><footer class="bg-dark text-white">
         <div class="container py-4">
           <div class="row py-5">
             <div class="col-md-4 mb-3 mb-md-0">
@@ -60,15 +81,32 @@
         <p class="text-muted text-sm">Stylesheet switching is done via JavaScript and can cause a blink while page loads. This will not happen in your production code.</p>
       </div>
       <!-- JavaScript files-->
-      <script src="https://d19m59y37dris4.cloudfront.net/boutique/2-0/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-      <script src="https://d19m59y37dris4.cloudfront.net/boutique/2-0/vendor/glightbox/js/glightbox.min.js"></script>
-      <script src="https://d19m59y37dris4.cloudfront.net/boutique/2-0/vendor/nouislider/nouislider.min.js"></script>
-      <script src="https://d19m59y37dris4.cloudfront.net/boutique/2-0/vendor/swiper/swiper-bundle.min.js"></script>
-      <script src="https://d19m59y37dris4.cloudfront.net/boutique/2-0/vendor/choices.js/public/assets/scripts/choices.min.js"></script>
-      <script src="js/front.e0700006.js"></script>
-      <script src="js/js-cookie.55cdbe0d.js"> </script>
-      <script src="js/demo.aa085612.js"> </script>
-      <script>
+      <?php echo '<script'; ?>
+ src="https://d19m59y37dris4.cloudfront.net/boutique/2-0/vendor/bootstrap/js/bootstrap.bundle.min.js"><?php echo '</script'; ?>
+>
+      <?php echo '<script'; ?>
+ src="https://d19m59y37dris4.cloudfront.net/boutique/2-0/vendor/glightbox/js/glightbox.min.js"><?php echo '</script'; ?>
+>
+      <?php echo '<script'; ?>
+ src="https://d19m59y37dris4.cloudfront.net/boutique/2-0/vendor/nouislider/nouislider.min.js"><?php echo '</script'; ?>
+>
+      <?php echo '<script'; ?>
+ src="https://d19m59y37dris4.cloudfront.net/boutique/2-0/vendor/swiper/swiper-bundle.min.js"><?php echo '</script'; ?>
+>
+      <?php echo '<script'; ?>
+ src="https://d19m59y37dris4.cloudfront.net/boutique/2-0/vendor/choices.js/public/assets/scripts/choices.min.js"><?php echo '</script'; ?>
+>
+      <?php echo '<script'; ?>
+ src="js/front.e0700006.js"><?php echo '</script'; ?>
+>
+      <?php echo '<script'; ?>
+ src="js/js-cookie.55cdbe0d.js"> <?php echo '</script'; ?>
+>
+      <?php echo '<script'; ?>
+ src="js/demo.aa085612.js"> <?php echo '</script'; ?>
+>
+      <?php echo '<script'; ?>
+>
         // ------------------------------------------------------- //
         //   Inject SVG Sprite - 
         //   see more here 
@@ -92,6 +130,7 @@
         // pls don't forget to change to your domain :)
         injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg'); 
         
-      </script>
+      <?php echo '</script'; ?>
+>
       <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"><?php }} ?>
