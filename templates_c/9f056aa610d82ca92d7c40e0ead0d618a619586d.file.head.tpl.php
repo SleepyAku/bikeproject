@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-01-26 06:12:04
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-01-26 07:22:24
          compiled from ".\templates\head.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:109326432463d28a34b25800-22944069%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:114716273963d29ab06deec0-98178609%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,15 +11,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '109326432463d28a34b25800-22944069',
+  'nocache_hash' => '114716273963d29ab06deec0-98178609',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_63d28a34b261e5_93904358',
+  'unifunc' => 'content_63d29ab06df729_34070523',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_63d28a34b261e5_93904358')) {function content_63d28a34b261e5_93904358($_smarty_tpl) {?><head>
+<?php if ($_valid && !is_callable('content_63d29ab06df729_34070523')) {function content_63d29ab06df729_34070523($_smarty_tpl) {?><head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Bike Store</title>

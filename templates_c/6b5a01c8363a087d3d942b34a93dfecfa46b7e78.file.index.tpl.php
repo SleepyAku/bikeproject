@@ -1,25 +1,30 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-01-26 06:12:04
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-01-26 07:22:24
          compiled from ".\templates\index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:192136443763d28a34b06425-15251536%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:201700663963d29ab06be693-88634236%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '6b5a01c8363a087d3d942b34a93dfecfa46b7e78' => 
     array (
       0 => '.\\templates\\index.tpl',
-      1 => 1674486884,
+      1 => 1674746349,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '192136443763d28a34b06425-15251536',
+  'nocache_hash' => '201700663963d29ab06be693-88634236',
   'function' => 
   array (
   ),
+  'variables' => 
+  array (
+    'ListCategories' => 0,
+    'ListProducts' => 0,
+  ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_63d28a34b1ceb7_83639695',
+  'unifunc' => 'content_63d29ab06d64b2_32435683',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_63d28a34b1ceb7_83639695')) {function content_63d28a34b1ceb7_83639695($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_63d29ab06d64b2_32435683')) {function content_63d29ab06d64b2_32435683($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 
 <?php echo $_smarty_tpl->getSubTemplate ("head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
@@ -57,10 +62,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 <div class="row">
 
                     <!-- CATEGORIES SECTION this div section gets replaced by the database categories dd the image varchar(255) to the-->
-                    <div class="col-md-4"><a class="category-item" href="shop.php?category_id"><img class="img-fluid"
-                                src="images\bike1.jpg" alt="" /><strong class="category-item-title">[categories
-                                name]</strong></a>
-                    </div>
+                    <?php echo $_smarty_tpl->tpl_vars['ListCategories']->value;?>
+
 
                 </div>
             </section>
@@ -76,28 +79,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
                 <div class="row">
                     <!-- PRODUCT   This whole section gets insert by the database  add the image varchar(255) to the products-->
-                    <div class="col-xl-3 col-lg-4 col-sm-6">
-                        <div class="product text-center">
-                            <div class="position-relative mb-3">
-                                <div class="badge text-white bg-"></div><a class="d-block"
-                                    href="detail.php?id=[productid]"><img class="img-fluid w-100" src="images\bike2.jpg"
-                                        alt="..."></a>
-                                <div class="product-overlay">
-                                    <ul class="mb-0 list-inline">
-                                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark"
-                                                href="#!"><i class="far fa-heart"></i></a></li>
-                                        <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark"
-                                                href="cart.php">Add to cart</a></li>
-                                        <li class="list-inline-item me-0"><a class="btn btn-sm btn-outline-dark"
-                                                href="#productView" data-bs-toggle="modal"><i
-                                                    class="fas fa-expand"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h6> <a class="reset-anchor" href="detail.php?id=[productid]">[productname]</a></h6>
-                            <p class="small text-muted">[productprice]</p>
-                        </div>
-                    </div>
+                    <?php echo $_smarty_tpl->tpl_vars['ListProducts']->value;?>
+
 
 
                 </div>
