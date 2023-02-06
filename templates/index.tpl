@@ -12,7 +12,7 @@
         <!-- HERO SECTION-->
         <div class="container">
             <section class="hero pb-3 bg-cover bg-center d-flex align-items-center"
-                style="background: url('images/specialbikeimage.jpg')">
+                style="background: url('images/bikebackground.png')">
                 <div class="container py-5">
                     <div class="row px-4 px-lg-5">
                         <div class="col-lg-6">

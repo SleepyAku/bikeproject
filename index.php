@@ -1,4 +1,5 @@
 <?php
+//session_start();
 
 require 'libs/Smarty.class.php';
 

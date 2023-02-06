@@ -51,9 +51,7 @@
         <script
             src="https://d19m59y37dris4.cloudfront.net/boutique/2-0/vendor/choices.js/public/assets/scripts/choices.min.js">
         </script>
-        <script src="js/front.e0700006.js"></script>
-        <script src="js/js-cookie.55cdbe0d.js"> </script>
-        <script src="js/demo.aa085612.js"> </script>
+        
         <script>
             // ------------------------------------------------------- //
             //   Inject SVG Sprite - 
@@ -81,3 +79,227 @@
         <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
 integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+<script>
+
+
+        function cancelregistration() {
+            $('#myregistration').modal('hide');
+            $('#myregistration').hide();
+            //$('.modal-backdrop').hide();
+        }
+
+
+        function registerpopup() {
+
+            $('#myregistration').modal('show');
+
+        }
+
+
+
+        function cancellogin() {
+
+            $('#mylogin').modal('hide');
+            $('#mylogin').hide();
+            $('.modal-backdrop').hide();
+
+        }
+
+
+        function updatelogin() {
+        
+       
+        userName = document.getElementById("emaillogin").value;
+        password = document.getElementById("password").value;
+
+
+        if (checkLogin(userName, password) == false) {
+
+            document.getElementById("loginstatus").innerText = "User ID / Password Not Correct";
+            userName = "";
+            password = "";
+            document.getElementById("password").value = "";
+            return false;
+
+        }
+
+
+        //This will set the Account menu item to show after a login
+        var apagesDropdown = document.getElementById("pagesDropdown");
+        apagesDropdown.style.visibility = "visible";
+
+
+
+        document.getElementById("login").innerText = "Logout";
+        sessionStorage.setItem("username", userName);
+
+
+        $('#mylogin').modal('hide');
+        $('#mylogin').hide();
+        $('.modal-backdrop').hide();
+
+        return true;
+
+    }
+
+
+
+    
+    function checkLogin(arguserName, argpassword) {
+
+        //console.log("checkLogin: "+arguserName+" pw:"+argpassword+" gameid:"+gameid+" id: "+playerId);
+        
+          if( arguserName == "")
+          {
+              return false;
+          }
+  
+     
+          var strreturnlogin = false;
+  
+          $.ajax({
+              type: "GET",
+              url: "checklogin.php",
+              dataType: "text",
+              async: false,
+              data: {
+                  type: "login",
+                  user: arguserName,
+                  password: argpassword,
+              },
+              success: function (data) {
+                
+                data = data.trim();
+                
+               console.log("checkLogin data: "+data);
+                  if (data == "0") {
+                      strreturnlogin = false;
+                 
+                  } else if (data == "error") {
+                      strreturnlogin = false;
+                  
+                  }
+                  else 
+                  {
+                      strreturnlogin = true;
+                      userName = arguserName;
+                   
+                  }
+  
+  
+                  return strreturnlogin;
+  
+                 
+              },
+          });
+  
+  
+          return strreturnlogin;
+  
+      }
+
+
+      function updateregister() {
+
+
+
+//clearInterval(setintervalstart);
+
+var passwordr = document.getElementById("passwordr").value;
+
+
+var password2r = document.getElementById("password2r").value;
+
+
+userName = "";
+
+document.getElementById("password").value = "";
+document.getElementById("emaillogin").value = "";
+
+
+
+if (passwordr != "" && password2r == passwordr) {
+    
+    var displayname = document.getElementById("emailr").value;
+   
+
+
+    if (checkRegistration(displayname, passwordr, document.getElementById("emailr").value ) == "error") {
+
+        userName = "";
+        document.getElementById("registrationmessage").innerText = "Email is already Present. Try Loggin in.";
+        return false;
+
+    }
+    else
+    {
+        userName = "";
+
+        $('#myregistration').modal('hide');
+
+        $('#myregistration').hide();
+        //$('.modal-backdrop').hide();
+
+        $('#mylogin').modal('show');
+
+
+
+    }
+
+
+
+}
+else{
+    userName = "";
+     document.getElementById("registrationmessage").innerText = "Passwords do not Match.";
+     return;
+}
+
+
+}
+
+
+function checkRegistration(arguserName, argpassword, argemail) {
+
+
+
+                var strreturn = false;
+                
+                $.ajax({
+                    type: "GET",
+                    url: "checkregistration.php",
+                    dataType: "text",
+                    async: false,
+                    data: {
+                        type: "register",
+                        email: argemail,
+                        password: argpassword,
+                        username: arguserName,
+                    },
+                    success: function(data) {
+                        
+                        data = data.trim();
+
+                        if (data == "0") {
+                            strreturn = false;
+                        } else if (data == "error") {
+                            strreturn = false;
+                        } else {
+                            strreturn = true;
+                                                      
+                        }
+                       
+                    },
+                });
+
+
+                return strreturn;
+
+            }
+
+
+    </script>
+
+

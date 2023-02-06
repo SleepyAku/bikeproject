@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-01-27 07:57:37
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-02-06 06:32:24
          compiled from ".\templates\footer.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:103300678863d3f471637d03-46837074%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:148020711163e10f78be6da4-29176424%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'eb93922a3327546f6c1b40a96d2881f9f921a3ff' => 
     array (
       0 => '.\\templates\\footer.tpl',
-      1 => 1674742243,
+      1 => 1675354204,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '103300678863d3f471637d03-46837074',
+  'nocache_hash' => '148020711163e10f78be6da4-29176424',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_63d3f471638b35_20158955',
+  'unifunc' => 'content_63e10f78be9c32_82176676',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_63d3f471638b35_20158955')) {function content_63d3f471638b35_20158955($_smarty_tpl) {?><footer class="bg-dark text-white">
+<?php if ($_valid && !is_callable('content_63e10f78be9c32_82176676')) {function content_63e10f78be9c32_82176676($_smarty_tpl) {?><footer class="bg-dark text-white">
             <div class="container py-4">
                 <div class="row py-5">
                     <div class="col-md-4 mb-3 mb-md-0">
@@ -82,15 +82,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             src="https://d19m59y37dris4.cloudfront.net/boutique/2-0/vendor/choices.js/public/assets/scripts/choices.min.js">
         <?php echo '</script'; ?>
 >
-        <?php echo '<script'; ?>
- src="js/front.e0700006.js"><?php echo '</script'; ?>
->
-        <?php echo '<script'; ?>
- src="js/js-cookie.55cdbe0d.js"> <?php echo '</script'; ?>
->
-        <?php echo '<script'; ?>
- src="js/demo.aa085612.js"> <?php echo '</script'; ?>
->
+        
         <?php echo '<script'; ?>
 >
             // ------------------------------------------------------- //
@@ -120,4 +112,223 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
 integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+<?php echo '<script'; ?>
+>
+
+
+        function cancelregistration() {
+            $('#myregistration').modal('hide');
+            $('#myregistration').hide();
+            //$('.modal-backdrop').hide();
+        }
+
+
+        function registerpopup() {
+
+            $('#myregistration').modal('show');
+
+        }
+
+
+
+        function cancellogin() {
+
+            $('#mylogin').modal('hide');
+            $('#mylogin').hide();
+            $('.modal-backdrop').hide();
+
+        }
+
+
+        function updatelogin() {
+        
+       
+        userName = document.getElementById("emaillogin").value;
+        password = document.getElementById("password").value;
+
+
+        if (checkLogin(userName, password) == false) {
+
+            document.getElementById("loginstatus").innerText = "User ID / Password Not Correct";
+            userName = "";
+            password = "";
+            document.getElementById("password").value = "";
+            return false;
+
+        }
+
+        document.getElementById("login").innerText = "Logout";
+        sessionStorage.setItem("username", userName);
+
+
+        $('#mylogin').modal('hide');
+        $('#mylogin').hide();
+        $('.modal-backdrop').hide();
+
+        return true;
+
+    }
+
+
+
+    
+    function checkLogin(arguserName, argpassword) {
+
+        //console.log("checkLogin: "+arguserName+" pw:"+argpassword+" gameid:"+gameid+" id: "+playerId);
+        
+          if( arguserName == "")
+          {
+              return false;
+          }
+  
+     
+          var strreturnlogin = false;
+  
+          $.ajax({
+              type: "GET",
+              url: "checklogin.php",
+              dataType: "text",
+              async: false,
+              data: {
+                  type: "login",
+                  user: arguserName,
+                  password: argpassword,
+              },
+              success: function (data) {
+                
+                data = data.trim();
+                
+               console.log("checkLogin data: "+data);
+                  if (data == "0") {
+                      strreturnlogin = false;
+                 
+                  } else if (data == "error") {
+                      strreturnlogin = false;
+                  
+                  }
+                  else 
+                  {
+                      strreturnlogin = true;
+                      userName = arguserName;
+                   
+                  }
+  
+  
+                  return strreturnlogin;
+  
+                 
+              },
+          });
+  
+  
+          return strreturnlogin;
+  
+      }
+
+
+      function updateregister() {
+
+
+
+//clearInterval(setintervalstart);
+
+var passwordr = document.getElementById("passwordr").value;
+
+
+var password2r = document.getElementById("password2r").value;
+
+
+userName = "";
+
+document.getElementById("password").value = "";
+document.getElementById("emaillogin").value = "";
+
+
+
+if (passwordr != "" && password2r == passwordr) {
+    
+    var displayname = document.getElementById("emailr").value;
+   
+
+
+    if (checkRegistration(displayname, passwordr, document.getElementById("emailr").value ) == "error") {
+
+        userName = "";
+        document.getElementById("registrationmessage").innerText = "Email is already Present. Try Loggin in.";
+        return false;
+
+    }
+    else
+    {
+        userName = "";
+
+        $('#myregistration').modal('hide');
+
+        $('#myregistration').hide();
+        //$('.modal-backdrop').hide();
+
+        $('#mylogin').modal('show');
+
+
+
+    }
+
+
+
+}
+else{
+    userName = "";
+     document.getElementById("registrationmessage").innerText = "Passwords do not Match.";
+     return;
+}
+
+
+}
+
+
+function checkRegistration(arguserName, argpassword, argemail) {
+
+
+
+                var strreturn = false;
+                
+                $.ajax({
+                    type: "GET",
+                    url: "checkregistration.php",
+                    dataType: "text",
+                    async: false,
+                    data: {
+                        type: "register",
+                        email: argemail,
+                        password: argpassword,
+                        username: arguserName,
+                    },
+                    success: function(data) {
+                        
+                        data = data.trim();
+
+                        if (data == "0") {
+                            strreturn = false;
+                        } else if (data == "error") {
+                            strreturn = false;
+                        } else {
+                            strreturn = true;
+                                                      
+                        }
+                       
+                    },
+                });
+
+
+                return strreturn;
+
+            }
+
+
+    <?php echo '</script'; ?>
+>
+
+
 <?php }} ?>
