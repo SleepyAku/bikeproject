@@ -38,7 +38,7 @@
             }
 
 
-    $smarty->display('productsearch.tpl');
+    $smarty->display('index.tpl');
 
 
 ?>

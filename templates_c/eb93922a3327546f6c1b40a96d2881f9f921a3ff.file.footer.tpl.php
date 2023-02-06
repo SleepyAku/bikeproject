@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-02-06 06:32:24
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-02-06 08:06:12
          compiled from ".\templates\footer.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:148020711163e10f78be6da4-29176424%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:116211533663e12574aaa580-72727234%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'eb93922a3327546f6c1b40a96d2881f9f921a3ff' => 
     array (
       0 => '.\\templates\\footer.tpl',
-      1 => 1675354204,
+      1 => 1675694990,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '148020711163e10f78be6da4-29176424',
+  'nocache_hash' => '116211533663e12574aaa580-72727234',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_63e10f78be9c32_82176676',
+  'unifunc' => 'content_63e12574aae6b1_45416702',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_63e10f78be9c32_82176676')) {function content_63e10f78be9c32_82176676($_smarty_tpl) {?><footer class="bg-dark text-white">
+<?php if ($_valid && !is_callable('content_63e12574aae6b1_45416702')) {function content_63e12574aae6b1_45416702($_smarty_tpl) {?><footer class="bg-dark text-white">
             <div class="container py-4">
                 <div class="row py-5">
                     <div class="col-md-4 mb-3 mb-md-0">
@@ -158,6 +158,13 @@ integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9
             return false;
 
         }
+
+
+        //This will set the Account menu item to show after a login
+        var apagesDropdown = document.getElementById("pagesDropdown");
+        apagesDropdown.style.visibility = "visible";
+
+
 
         document.getElementById("login").innerText = "Logout";
         sessionStorage.setItem("username", userName);
