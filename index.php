@@ -1,16 +1,6 @@
 <?php
 //session_start();
 
-require 'libs/Smarty.class.php';
-
-$smarty = new Smarty;
-$smarty->force_compile = true;
-$smarty->debugging = false;
-$smarty->caching = false;
-
-$smarty->cache_lifetime = 0;
-
-$smarty->assign("title", "BikeProject.com");
 
 
 include('DatabaseClassConfig.php');
@@ -91,17 +81,7 @@ include('DatabaseClassConfig.php');
  
       $smarty->assign("ListProducts",  $result );
 
-      if(  $_SESSION["username"] == ""  )
-      {
-
-          $smarty->assign("loginbutton",  "Login" );
-           $smarty->assign("accountdropdown",  "hidden" );
-      }
-      else
-      {
-          $smarty->assign("loginbutton",  "Logout" );
-          $smarty->assign("accountdropdown",  "visible" );
-      }
+      include('footerbase.php');
 
 $smarty->display('index.tpl');
 
