@@ -1,12 +1,35 @@
-<!DOCTYPE html>
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-02-14 06:53:50
+         compiled from ".\templates\detail.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:92598624963eba07e307710-92761536%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'cb91c771222e6fd61afde9f5c9690851ed95a1f4' => 
+    array (
+      0 => '.\\templates\\detail.tpl',
+      1 => 1676386425,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '92598624963eba07e307710-92761536',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_63eba07e31c554_23399375',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_63eba07e31c554_23399375')) {function content_63eba07e31c554_23399375($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 
-{include file="head.tpl"}
+<?php echo $_smarty_tpl->getSubTemplate ("head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
 
 <body>
     <div class="page-holder">
         <!-- navbar-->
-        {include file="header.tpl"}
+        <?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
         <!--  Modal -->
 
         <div class="container">
@@ -353,9 +376,11 @@
         </div>
 
 
-        {include file="footer.tpl"}
+        <?php echo $_smarty_tpl->getSubTemplate ("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
     </div>
 </body>
 
 
 </html>
+<?php }} ?>
