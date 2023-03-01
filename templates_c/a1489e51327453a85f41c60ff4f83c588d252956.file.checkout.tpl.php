@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-02-23 08:00:24
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-02-27 06:25:11
          compiled from ".\templates\checkout.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:11049874463f78d98a28234-31387837%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:137532501663fcbd47972766-79781778%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'a1489e51327453a85f41c60ff4f83c588d252956' => 
     array (
       0 => '.\\templates\\checkout.tpl',
-      1 => 1677167974,
+      1 => 1677506231,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '11049874463f78d98a28234-31387837',
+  'nocache_hash' => '137532501663fcbd47972766-79781778',
   'function' => 
   array (
   ),
@@ -40,9 +40,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_63f78d98a46205_47841063',
+  'unifunc' => 'content_63fcbd4798f645_45333043',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_63f78d98a46205_47841063')) {function content_63f78d98a46205_47841063($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_63fcbd4798f645_45333043')) {function content_63fcbd4798f645_45333043($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 
 <?php echo $_smarty_tpl->getSubTemplate ("head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
@@ -147,7 +147,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <h2 class="h5 text-uppercase mb-4">Billing details</h2>
             <div class="row">
                 <div class="col-lg-8">
-                <form action="profile.php" method="POST">
+                <form action="checkout.php" method="POST">
                 <div class="row gy-3">
                     <div class="col-lg-6">
                 <label class="form-label text-sm text-uppercase" for="firstName">First name
@@ -309,11 +309,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <button type="submit" value="Save" id="save" name="save"
                         class="btn btn-primary">Save Changes</button>    
 
-                    <a class="btn btn-secondary"
-                        href="profile.php?remove=true&customer_id=<?php echo $_smarty_tpl->tpl_vars['customer_id']->value;?>
-"
-                        role="button">Remove
-                    </a>
+                    
                 </div>
                 </div>
             </div>

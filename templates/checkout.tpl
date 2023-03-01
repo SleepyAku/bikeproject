@@ -101,7 +101,7 @@
             <h2 class="h5 text-uppercase mb-4">Billing details</h2>
             <div class="row">
                 <div class="col-lg-8">
-                <form action="profile.php" method="POST">
+                <form action="checkout.php" method="POST">
                 <div class="row gy-3">
                     <div class="col-lg-6">
                 <label class="form-label text-sm text-uppercase" for="firstName">First name
@@ -242,10 +242,7 @@
                     <button type="submit" value="Save" id="save" name="save"
                         class="btn btn-primary">Save Changes</button>    
 
-                    <a class="btn btn-secondary"
-                        href="profile.php?remove=true&customer_id={$customer_id}"
-                        role="button">Remove
-                    </a>
+                    
                 </div>
                 </div>
             </div>

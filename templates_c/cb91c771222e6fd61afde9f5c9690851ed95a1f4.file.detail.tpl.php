@@ -1,25 +1,35 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-02-23 08:11:02
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-03-01 05:39:16
          compiled from ".\templates\detail.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:102752590563f79016b71b96-76559452%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:214267528163ff5584ee1ed4-52707018%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'cb91c771222e6fd61afde9f5c9690851ed95a1f4' => 
     array (
       0 => '.\\templates\\detail.tpl',
-      1 => 1676386425,
+      1 => 1677514085,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '102752590563f79016b71b96-76559452',
+  'nocache_hash' => '214267528163ff5584ee1ed4-52707018',
   'function' => 
   array (
   ),
+  'variables' => 
+  array (
+    'image' => 0,
+    'product_name' => 0,
+    'list_price' => 0,
+    'description' => 0,
+    'sku' => 0,
+    'category_name' => 0,
+    'tags' => 0,
+  ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_63f79016b88151_14534241',
+  'unifunc' => 'content_63ff5584f01902_27968909',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_63f79016b88151_14534241')) {function content_63f79016b88151_14534241($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_63ff5584f01902_27968909')) {function content_63ff5584f01902_27968909($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 
 <?php echo $_smarty_tpl->getSubTemplate ("head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
@@ -45,11 +55,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                         <div class="col-lg-6 p-lg-0"><a
                                 class="glightbox product-view d-block h-100 bg-cover bg-center"
                                 style="background: url(https://d19m59y37dris4.cloudfront.net/boutique/2-0/img/product-5.aff049a7.jpg)"
-                                href="img/product-5.aff049a7.jpg" data-gallery="gallery1"
+                                href="images/<?php echo $_smarty_tpl->tpl_vars['image']->value;?>
+" data-gallery="gallery1"
                                 data-glightbox="Red digital smartwatch"></a><a class="glightbox d-none"
-                                href="img/product-5-alt-1.590676e9.jpg" data-gallery="gallery1"
+                                href="images/<?php echo $_smarty_tpl->tpl_vars['image']->value;?>
+" data-gallery="gallery1"
                                 data-glightbox="Red digital smartwatch"></a><a class="glightbox d-none"
-                                href="img/product-5-alt-2.bfa04461.jpg" data-gallery="gallery1"
+                                href="images/<?php echo $_smarty_tpl->tpl_vars['image']->value;?>
+" data-gallery="gallery1"
                                 data-glightbox="Red digital smartwatch"></a></div>
                         <div class="col-lg-6">
                             <div class="p-4 my-md-4">
@@ -65,12 +78,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                                     <li class="list-inline-item m-0 4"><i
                                             class="fas fa-star small text-warning"></i></li>
                                 </ul>
-                                <h2 class="h4">Red digital smartwatch</h2>
-                                <p class="text-muted">$250</p>
-                                <p class="text-sm mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                                    ut ullamcorper leo, eget euismod orci. Cum sociis natoque penatibus et magnis
-                                    dis parturient montes nascetur ridiculus mus. Vestibulum ultricies aliquam
-                                    convallis.</p>
+                                <h2 class="h4"><?php echo $_smarty_tpl->tpl_vars['product_name']->value;?>
+</h2>
+                                <p class="text-muted">$<?php echo $_smarty_tpl->tpl_vars['list_price']->value;?>
+</p>
+                                <p class="text-sm mb-4"><?php echo $_smarty_tpl->tpl_vars['description']->value;?>
+</p>
                                 <div class="row align-items-stretch mb-4 gx-0">
                                     <div class="col-sm-7">
                                         <div
@@ -109,17 +122,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                             <div class="swiper product-slider-thumbs">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide h-auto swiper-thumb-item mb-3"><img class="w-100"
-                                            src="https://d19m59y37dris4.cloudfront.net/boutique/2-0/img/product-detail-1.023bc49d.jpg"
+                                            src="images/<?php echo $_smarty_tpl->tpl_vars['image']->value;?>
+"
                                             alt="..."></div>
-                                    <div class="swiper-slide h-auto swiper-thumb-item mb-3"><img class="w-100"
-                                            src="https://d19m59y37dris4.cloudfront.net/boutique/2-0/img/product-detail-2.62056b28.jpg"
-                                            alt="..."></div>
-                                    <div class="swiper-slide h-auto swiper-thumb-item mb-3"><img class="w-100"
-                                            src="https://d19m59y37dris4.cloudfront.net/boutique/2-0/img/product-detail-3.4edd674c.jpg"
-                                            alt="..."></div>
-                                    <div class="swiper-slide h-auto swiper-thumb-item mb-3"><img class="w-100"
-                                            src="https://d19m59y37dris4.cloudfront.net/boutique/2-0/img/product-detail-4.072fd9d4.jpg"
-                                            alt="..."></div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -127,25 +133,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                             <div class="swiper product-slider">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide h-auto"><a class="glightbox product-view"
-                                            href="img/product-detail-1.023bc49d.jpg" data-gallery="gallery2"
+                                            href="images/<?php echo $_smarty_tpl->tpl_vars['image']->value;?>
+" data-gallery="gallery2"
                                             data-glightbox="Product item 1"><img class="img-fluid"
-                                                src="https://d19m59y37dris4.cloudfront.net/boutique/2-0/img/product-detail-1.023bc49d.jpg"
+                                                src="images/<?php echo $_smarty_tpl->tpl_vars['image']->value;?>
+"
                                                 alt="..."></a></div>
-                                    <div class="swiper-slide h-auto"><a class="glightbox product-view"
-                                            href="img/product-detail-2.62056b28.jpg" data-gallery="gallery2"
-                                            data-glightbox="Product item 2"><img class="img-fluid"
-                                                src="https://d19m59y37dris4.cloudfront.net/boutique/2-0/img/product-detail-2.62056b28.jpg"
-                                                alt="..."></a></div>
-                                    <div class="swiper-slide h-auto"><a class="glightbox product-view"
-                                            href="img/product-detail-3.4edd674c.jpg" data-gallery="gallery2"
-                                            data-glightbox="Product item 3"><img class="img-fluid"
-                                                src="https://d19m59y37dris4.cloudfront.net/boutique/2-0/img/product-detail-3.4edd674c.jpg"
-                                                alt="..."></a></div>
-                                    <div class="swiper-slide h-auto"><a class="glightbox product-view"
-                                            href="img/product-detail-4.072fd9d4.jpg" data-gallery="gallery2"
-                                            data-glightbox="Product item 4"><img class="img-fluid"
-                                                src="https://d19m59y37dris4.cloudfront.net/boutique/2-0/img/product-detail-4.072fd9d4.jpg"
-                                                alt="..."></a></div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -160,11 +154,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                         <li class="list-inline-item m-0 3"><i class="fas fa-star small text-warning"></i></li>
                         <li class="list-inline-item m-0 4"><i class="fas fa-star small text-warning"></i></li>
                     </ul>
-                    <h1>Red digital smartwatch</h1>
-                    <p class="text-muted lead">$250</p>
-                    <p class="text-sm mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut
-                        ullamcorper leo, eget euismod orci. Cum sociis natoque penatibus et magnis dis parturient
-                        montes nascetur ridiculus mus. Vestibulum ultricies aliquam convallis.</p>
+                    <h1><?php echo $_smarty_tpl->tpl_vars['product_name']->value;?>
+</h1>
+                    <p class="text-muted lead">$<?php echo $_smarty_tpl->tpl_vars['list_price']->value;?>
+</p>
+                    <p class="text-sm mb-4"><?php echo $_smarty_tpl->tpl_vars['description']->value;?>
+</p>
                     <div class="row align-items-stretch mb-4">
                         <div class="col-sm-5 pr-sm-0">
                             <div
@@ -184,13 +179,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                             class="far fa-heart me-2"></i>Add to wish list</a><br>
                     <ul class="list-unstyled small d-inline-block">
                         <li class="px-3 py-2 mb-1 bg-white"><strong class="text-uppercase">SKU:</strong><span
-                                class="ms-2 text-muted">039</span></li>
+                                class="ms-2 text-muted"><?php echo $_smarty_tpl->tpl_vars['sku']->value;?>
+</span></li>
                         <li class="px-3 py-2 mb-1 bg-white text-muted"><strong
                                 class="text-uppercase text-dark">Category:</strong><a class="reset-anchor ms-2"
-                                href="#!">Demo Products</a></li>
+                                href="#!"><?php echo $_smarty_tpl->tpl_vars['category_name']->value;?>
+</a></li>
                         <li class="px-3 py-2 mb-1 bg-white text-muted"><strong
                                 class="text-uppercase text-dark">Tags:</strong><a class="reset-anchor ms-2"
-                                href="#!">Innovation</a></li>
+                                href="#!"><?php echo $_smarty_tpl->tpl_vars['tags']->value;?>
+</a></li>
                     </ul>
                 </div>
             </div>
@@ -207,12 +205,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     aria-labelledby="description-tab">
                     <div class="p-4 p-lg-5 bg-white">
                         <h6 class="text-uppercase">Product description </h6>
-                        <p class="text-muted text-sm mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                            eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                            qui officia deserunt mollit anim id est laborum.</p>
+                        <p class="text-muted text-sm mb-0"><?php echo $_smarty_tpl->tpl_vars['description']->value;?>
+</p>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
@@ -238,9 +232,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                                             <li class="list-inline-item m-0"><i
                                                     class="fas fa-star-half-alt text-warning"></i></li>
                                         </ul>
-                                        <p class="text-sm mb-0 text-muted">Lorem ipsum dolor sit amet, consectetur
-                                            adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                            magna aliqua.</p>
+                                        <p class="text-sm mb-0 text-muted"><?php echo $_smarty_tpl->tpl_vars['description']->value;?>
+</p>
                                     </div>
                                 </div>
                                 <div class="d-flex">
@@ -262,9 +255,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                                             <li class="list-inline-item m-0"><i
                                                     class="fas fa-star-half-alt text-warning"></i></li>
                                         </ul>
-                                        <p class="text-sm mb-0 text-muted">Lorem ipsum dolor sit amet, consectetur
-                                            adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                            magna aliqua.</p>
+                                        <p class="text-sm mb-0 text-muted"><?php echo $_smarty_tpl->tpl_vars['description']->value;?>
+</p>
                                     </div>
                                 </div>
                             </div>
@@ -272,102 +264,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     </div>
                 </div>
             </div>
-            <!-- RELATED PRODUCTS-->
-            <h2 class="h5 text-uppercase mb-4">Related products</h2>
-            <div class="row">
-                <!-- PRODUCT-->
-                <div class="col-lg-3 col-sm-6">
-                    <div class="product text-center skel-loader">
-                        <div class="d-block mb-3 position-relative"><a class="d-block" href="detail.php"><img
-                                    class="img-fluid w-100"
-                                    src="https://d19m59y37dris4.cloudfront.net/boutique/2-0/img/product-1.37a0a89c.jpg"
-                                    alt="..."></a>
-                            <div class="product-overlay">
-                                <ul class="mb-0 list-inline">
-                                    <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark"
-                                            href="#!"><i class="far fa-heart"></i></a></li>
-                                    <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark"
-                                            href="#!">Add to cart</a></li>
-                                    <li class="list-inline-item mr-0"><a class="btn btn-sm btn-outline-dark"
-                                            href="#productView" data-bs-toggle="modal"><i
-                                                class="fas fa-expand"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h6> <a class="reset-anchor" href="detail.php">Kui Ye Chen’s AirPods</a></h6>
-                        <p class="small text-muted">$250</p>
-                    </div>
-                </div>
-                <!-- PRODUCT-->
-                <div class="col-lg-3 col-sm-6">
-                    <div class="product text-center skel-loader">
-                        <div class="d-block mb-3 position-relative"><a class="d-block" href="detail.php"><img
-                                    class="img-fluid w-100"
-                                    src="https://d19m59y37dris4.cloudfront.net/boutique/2-0/img/product-2.1adefbd6.jpg"
-                                    alt="..."></a>
-                            <div class="product-overlay">
-                                <ul class="mb-0 list-inline">
-                                    <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark"
-                                            href="#!"><i class="far fa-heart"></i></a></li>
-                                    <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark"
-                                            href="#!">Add to cart</a></li>
-                                    <li class="list-inline-item mr-0"><a class="btn btn-sm btn-outline-dark"
-                                            href="#productView" data-bs-toggle="modal"><i
-                                                class="fas fa-expand"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h6> <a class="reset-anchor" href="detail.php">Air Jordan 12 gym red</a></h6>
-                        <p class="small text-muted">$300</p>
-                    </div>
-                </div>
-                <!-- PRODUCT-->
-                <div class="col-lg-3 col-sm-6">
-                    <div class="product text-center skel-loader">
-                        <div class="d-block mb-3 position-relative"><a class="d-block" href="detail.php"><img
-                                    class="img-fluid w-100"
-                                    src="https://d19m59y37dris4.cloudfront.net/boutique/2-0/img/product-3.e4af5b82.jpg"
-                                    alt="..."></a>
-                            <div class="product-overlay">
-                                <ul class="mb-0 list-inline">
-                                    <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark"
-                                            href="#!"><i class="far fa-heart"></i></a></li>
-                                    <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark"
-                                            href="#!">Add to cart</a></li>
-                                    <li class="list-inline-item mr-0"><a class="btn btn-sm btn-outline-dark"
-                                            href="#productView" data-bs-toggle="modal"><i
-                                                class="fas fa-expand"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h6> <a class="reset-anchor" href="detail.php">Cyan cotton t-shirt</a></h6>
-                        <p class="small text-muted">$25</p>
-                    </div>
-                </div>
-                <!-- PRODUCT-->
-                <div class="col-lg-3 col-sm-6">
-                    <div class="product text-center skel-loader">
-                        <div class="d-block mb-3 position-relative"><a class="d-block" href="detail.php"><img
-                                    class="img-fluid w-100"
-                                    src="https://d19m59y37dris4.cloudfront.net/boutique/2-0/img/product-4.719c3a60.jpg"
-                                    alt="..."></a>
-                            <div class="product-overlay">
-                                <ul class="mb-0 list-inline">
-                                    <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark"
-                                            href="#!"><i class="far fa-heart"></i></a></li>
-                                    <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark"
-                                            href="#!">Add to cart</a></li>
-                                    <li class="list-inline-item mr-0"><a class="btn btn-sm btn-outline-dark"
-                                            href="#productView" data-bs-toggle="modal"><i
-                                                class="fas fa-expand"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h6> <a class="reset-anchor" href="detail.php">Timex Unisex Originals</a></h6>
-                        <p class="small text-muted">$351</p>
-                    </div>
-                </div>
-            </div>
+            
+            
         </div>
     </section>
 
