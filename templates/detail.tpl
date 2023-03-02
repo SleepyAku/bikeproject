@@ -63,7 +63,7 @@
                                     </div>
                                     <div class="col-sm-5"><a
                                             class="btn btn-dark btn-sm w-100 h-100 d-flex align-items-center justify-content-center px-0"
-                                            href="cart.php">Add to cart</a></div>
+                                        href="cart.php?product_id={$product_id}">Add to cart</a></div>
                                 </div><a class="btn btn-link text-dark text-decoration-none p-0" href="#!"><i
                                         class="far fa-heart me-2"></i>Add to wish list</a>
                             </div>
@@ -94,7 +94,7 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide h-auto"><a class="glightbox product-view"
                                             href="images/{$image}" data-gallery="gallery2"
-                                            data-glightbox="Product item 1"><img class="img-fluid"
+                                            data-glightbox="Product item 1"><img width="100%" height="100%"
                                                 src="images/{$image}"
                                                 alt="..."></a></div>
                                     
@@ -127,9 +127,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-3 pl-sm-0"><a
-                                class="btn btn-dark btn-sm btn-block h-100 d-flex align-items-center justify-content-center px-0"
-                                href="cart.php">Add to cart</a></div>
+                        <div class="col-sm-5"><a
+                                class="btn btn-dark btn-sm w-100 h-100 d-flex align-items-center justify-content-center px-0"
+                            href="cart.php?product_id={$product_id}">Add to cart</a></div>
                     </div><a class="text-dark p-0 mb-4 d-inline-block" href="#!"><i
                             class="far fa-heart me-2"></i>Add to wish list</a><br>
                     <ul class="list-unstyled small d-inline-block">

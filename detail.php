@@ -14,12 +14,12 @@
     
     $product_id = $_GET["product_id"];
     
-    //$tsql = "select p.product_id, p.product_name, p.list_price, p.image, p.description, p.sku, p.tags, c.category_name here from production.products p inner join production.categories c on c.category_id = p.category_id where p.product_id = '" . $product_id . "'"
+    $tsql = "select p.product_id, p.product_name, p.list_price, p.image, p.description, p.sku, p.tags, c.category_name from production.products p inner join production.categories c on c.category_id = p.category_id where p.product_id = '" . $product_id . "'";
     
-    //if ($db->Select($tsql, "customer_id") === false) {
-        //$db->closeConnection();
-        //header("Location: index.html");
-    //}
+    if ($db->Select($tsql, "product_id") === false) {
+        $db->closeConnection();
+        header("Location: index.html");
+    }
 
 
 
