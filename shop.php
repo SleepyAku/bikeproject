@@ -156,7 +156,7 @@ $result = $result.'<div class="col-lg-4 col-sm-6">
                                                            class="btn btn-sm btn-outline-dark" href="#!"><i
                                                                class="far fa-heart"></i></a></li>
                                                    <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark"
-                                                           href="cart.php">Add to cart</a></li>
+                                                           href="cart.php?product_id='.$product_id.'&quantity=1&list_price='.$list_price.'">Add to cart</a></li>
                                                    <li class="list-inline-item mr-0"><a
                                                            class="btn btn-sm btn-outline-dark" href="#productView"
                                                            data-bs-toggle="modal"><i class="fas fa-expand"></i></a>

@@ -7,7 +7,7 @@
     
     
 
-    $tsql = "select top 1 email from sales.customers where password = '".$_GET['password']."' COLLATE SQL_Latin1_General_CP1_CS_AS and email = '".$_GET['user']."'";
+    $tsql = "select top 1 email, customer_id from sales.customers where password = '".$_GET['password']."' COLLATE SQL_Latin1_General_CP1_CS_AS and email = '".$_GET['user']."'";
     //This code will check that the password is case sensitive but not the email address.            
 
 
@@ -19,6 +19,7 @@
                 {
                     $resultmessage = $row[0];
                     $_SESSION["username"] = $_GET['user'];
+                    $_SESSION["customer_id"] = $row[1];
                 }
 
             sqlsrv_free_stmt($stmt);

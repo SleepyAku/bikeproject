@@ -63,7 +63,7 @@
                                     </div>
                                     <div class="col-sm-5"><a
                                             class="btn btn-dark btn-sm w-100 h-100 d-flex align-items-center justify-content-center px-0"
-                                        href="cart.php?product_id={$product_id}">Add to cart</a></div>
+                                        href="cart.php?product_id={$product_id}&quantity=1&list_price={$list_price}">Add to cart</a></div>
                                 </div><a class="btn btn-link text-dark text-decoration-none p-0" href="#!"><i
                                         class="far fa-heart me-2"></i>Add to wish list</a>
                             </div>
@@ -129,7 +129,7 @@
                         </div>
                         <div class="col-sm-5"><a
                                 class="btn btn-dark btn-sm w-100 h-100 d-flex align-items-center justify-content-center px-0"
-                            href="cart.php?product_id={$product_id}">Add to cart</a></div>
+                            href="cart.php?product_id={$product_id}&quantity=1&list_price={$list_price}">Add to cart</a></div>
                     </div><a class="text-dark p-0 mb-4 d-inline-block" href="#!"><i
                             class="far fa-heart me-2"></i>Add to wish list</a><br>
                     <ul class="list-unstyled small d-inline-block">

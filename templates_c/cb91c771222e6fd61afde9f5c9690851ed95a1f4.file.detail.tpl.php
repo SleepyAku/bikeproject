@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-03-02 06:26:02
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-03-08 06:29:05
          compiled from ".\templates\detail.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:4979114016400b1fa3c9719-85458121%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:24595350564089bb1358858-52294810%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'cb91c771222e6fd61afde9f5c9690851ed95a1f4' => 
     array (
       0 => '.\\templates\\detail.tpl',
-      1 => 1677766655,
+      1 => 1678285034,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '4979114016400b1fa3c9719-85458121',
+  'nocache_hash' => '24595350564089bb1358858-52294810',
   'function' => 
   array (
   ),
@@ -28,9 +28,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_6400b1fa3e5ad6_20263694',
+  'unifunc' => 'content_64089bb13752d0_00559025',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_6400b1fa3e5ad6_20263694')) {function content_6400b1fa3e5ad6_20263694($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_64089bb13752d0_00559025')) {function content_64089bb13752d0_00559025($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 
 <?php echo $_smarty_tpl->getSubTemplate ("head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
@@ -104,6 +104,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                                     <div class="col-sm-5"><a
                                             class="btn btn-dark btn-sm w-100 h-100 d-flex align-items-center justify-content-center px-0"
                                         href="cart.php?product_id=<?php echo $_smarty_tpl->tpl_vars['product_id']->value;?>
+&quantity=1&list_price=<?php echo $_smarty_tpl->tpl_vars['list_price']->value;?>
 ">Add to cart</a></div>
                                 </div><a class="btn btn-link text-dark text-decoration-none p-0" href="#!"><i
                                         class="far fa-heart me-2"></i>Add to wish list</a>
@@ -177,6 +178,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                         <div class="col-sm-5"><a
                                 class="btn btn-dark btn-sm w-100 h-100 d-flex align-items-center justify-content-center px-0"
                             href="cart.php?product_id=<?php echo $_smarty_tpl->tpl_vars['product_id']->value;?>
+&quantity=1&list_price=<?php echo $_smarty_tpl->tpl_vars['list_price']->value;?>
 ">Add to cart</a></div>
                     </div><a class="text-dark p-0 mb-4 d-inline-block" href="#!"><i
                             class="far fa-heart me-2"></i>Add to wish list</a><br>
