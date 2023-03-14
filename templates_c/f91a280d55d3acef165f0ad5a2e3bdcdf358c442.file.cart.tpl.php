@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-03-13 05:45:14
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-03-13 08:09:27
          compiled from ".\templates\cart.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:784822395640f1ada994b47-11834395%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:767222710640f3ca72068e8-06522605%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'f91a280d55d3acef165f0ad5a2e3bdcdf358c442' => 
     array (
       0 => '.\\templates\\cart.tpl',
-      1 => 1678111456,
+      1 => 1678719826,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '784822395640f1ada994b47-11834395',
+  'nocache_hash' => '767222710640f3ca72068e8-06522605',
   'function' => 
   array (
   ),
@@ -19,13 +19,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
     'carttable' => 0,
     'subtotal' => 0,
+    'shipping' => 0,
+    'tax' => 0,
     'grandtotal' => 0,
+    'order_id' => 0,
+    'customer_id' => 0,
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_640f1ada9acb14_08252371',
+  'unifunc' => 'content_640f3ca721f6a1_04587403',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_640f1ada9acb14_08252371')) {function content_640f1ada9acb14_08252371($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_640f3ca721f6a1_04587403')) {function content_640f3ca721f6a1_04587403($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <?php echo $_smarty_tpl->getSubTemplate ("head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
@@ -36,7 +40,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
         <!--  Modal -->
- 
+
         <div class="container">
             <!-- HERO SECTION-->
             <section class="py-5 bg-light">
@@ -88,17 +92,46 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                                             class="text-muted small">$<?php echo $_smarty_tpl->tpl_vars['subtotal']->value;?>
 </span></li>
                                     <li class="border-bottom my-2"></li>
+                                    <li class="d-flex align-items-center justify-content-between"><strong
+                                            class="text-uppercase small font-weight-bold">Shipping</strong><span
+                                            class="text-muted small">$<?php echo $_smarty_tpl->tpl_vars['shipping']->value;?>
+</span></li>
+                                    <li class="border-bottom my-2"></li>
+                                    <li class="d-flex align-items-center justify-content-between"><strong
+                                            class="text-uppercase small font-weight-bold">Tax</strong><span
+                                            class="text-muted small">$<?php echo $_smarty_tpl->tpl_vars['tax']->value;?>
+</span></li>
+                                    <li class="border-bottom my-2"></li>
                                     <li class="d-flex align-items-center justify-content-between mb-4"><strong
                                             class="text-uppercase small font-weight-bold">Total</strong><span>$<?php echo $_smarty_tpl->tpl_vars['grandtotal']->value;?>
 </span>
                                     </li>
                                     <li>
-                                        <form action="#">
-                                            <div class="input-group mb-0">
-                                                <input class="form-control" type="text" placeholder="Enter your coupon">
-                                                <button class="btn btn-dark btn-sm w-100" type="submit"> <i
-                                                        class="fas fa-gift me-2"></i>Apply coupon</button>
-                                            </div>
+                                        <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr"
+                                            method="post">
+                                            <input type="hidden" name="cmd" value="_cart">
+                                            <input type="hidden" name="business" value="rick@vivaldi2000.com">
+                                            <input type="hidden" name="lc" value="US">
+                                            <input type="hidden" name="item_name" value="<?php echo $_smarty_tpl->tpl_vars['order_id']->value;?>
+">
+                                            <input type="hidden" name="item_number" value="<?php echo $_smarty_tpl->tpl_vars['customer_id']->value;?>
+">
+                                            <input type="hidden" name="amount" value="<?php echo $_smarty_tpl->tpl_vars['subtotal']->value;?>
+">
+                                            <input type="hidden" name="currency_code" value="USD">
+                                            <input type="hidden" name="button_subtype" value="products">
+                                            <input type="hidden" name="tax_rate" value="<?php echo $_smarty_tpl->tpl_vars['tax']->value;?>
+">
+                                            <input type="hidden" name="shipping" value="<?php echo $_smarty_tpl->tpl_vars['shipping']->value;?>
+">
+                                            <input type="hidden" name="add" value="1">
+                                            <input type="hidden" name="bn"
+                                                value="PP-ShopCartBF:btn_cart_LG.gif:NonHostedGuest">
+                                            <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_cart_LG.gif"
+                                                border="0" name="submit"
+                                                alt="PayPal - The safer, easier way to pay online!">
+                                            <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif"
+                                                width="1" height="1">
                                         </form>
                                     </li>
                                 </ul>
@@ -113,9 +146,4 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </div>
 </body>
 
-</html>
-
-  
-
-    
-<?php }} ?>
+</html><?php }} ?>

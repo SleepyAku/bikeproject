@@ -7,7 +7,7 @@
         <!-- navbar-->
         {include file="header.tpl"}
         <!--  Modal -->
- 
+
         <div class="container">
             <!-- HERO SECTION-->
             <section class="py-5 bg-light">
@@ -57,16 +57,38 @@
                                             class="text-uppercase small font-weight-bold">Subtotal</strong><span
                                             class="text-muted small">${$subtotal}</span></li>
                                     <li class="border-bottom my-2"></li>
+                                    <li class="d-flex align-items-center justify-content-between"><strong
+                                            class="text-uppercase small font-weight-bold">Shipping</strong><span
+                                            class="text-muted small">${$shipping}</span></li>
+                                    <li class="border-bottom my-2"></li>
+                                    <li class="d-flex align-items-center justify-content-between"><strong
+                                            class="text-uppercase small font-weight-bold">Tax</strong><span
+                                            class="text-muted small">${$tax}</span></li>
+                                    <li class="border-bottom my-2"></li>
                                     <li class="d-flex align-items-center justify-content-between mb-4"><strong
                                             class="text-uppercase small font-weight-bold">Total</strong><span>${$grandtotal}</span>
                                     </li>
                                     <li>
-                                        <form action="#">
-                                            <div class="input-group mb-0">
-                                                <input class="form-control" type="text" placeholder="Enter your coupon">
-                                                <button class="btn btn-dark btn-sm w-100" type="submit"> <i
-                                                        class="fas fa-gift me-2"></i>Apply coupon</button>
-                                            </div>
+                                        <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr"
+                                            method="post">
+                                            <input type="hidden" name="cmd" value="_cart">
+                                            <input type="hidden" name="business" value="rick@vivaldi2000.com">
+                                            <input type="hidden" name="lc" value="US">
+                                            <input type="hidden" name="item_name" value="{$order_id}">
+                                            <input type="hidden" name="item_number" value="{$customer_id}">
+                                            <input type="hidden" name="amount" value="{$subtotal}">
+                                            <input type="hidden" name="currency_code" value="USD">
+                                            <input type="hidden" name="button_subtype" value="products">
+                                            <input type="hidden" name="tax_rate" value="{$tax}">
+                                            <input type="hidden" name="shipping" value="{$shipping}">
+                                            <input type="hidden" name="add" value="1">
+                                            <input type="hidden" name="bn"
+                                                value="PP-ShopCartBF:btn_cart_LG.gif:NonHostedGuest">
+                                            <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_cart_LG.gif"
+                                                border="0" name="submit"
+                                                alt="PayPal - The safer, easier way to pay online!">
+                                            <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif"
+                                                width="1" height="1">
                                         </form>
                                     </li>
                                 </ul>
@@ -81,7 +103,3 @@
 </body>
 
 </html>
-
-  
-
-    

@@ -82,6 +82,34 @@ $smarty->assign('grandtotal',  '3000');
 
 $db->closeConnection();
 
+$db = new DatabaseClass("sales.order_items",false,$global_serverName,$global_connectionInfo);
+
+$tsql = "SELECT sum(list_price * quantity) as total from sales.order_items where order_id = ".$order_id;
+$db->Select($tsql, "order_id");    
+
+
+$subtotal = $db->getFieldByColumnName("total");
+$tax = number_format($subtotal * .1,2);
+$shipping = number_format($subtotal * .15,2);
+
+
+
+$grandtotal = $subtotal + $tax + $shipping;
+$smarty->assign('subtotal',  $subtotal);
+$smarty->assign('grandtotal',  $grandtotal);
+
+$db->closeConnection();
+
+$smarty->assign('tax',  $tax);
+$smarty->assign('shipping',  $shipping);
+
+
+
+$smarty->assign('customer_id',  $customer_id);
+$smarty->assign('order_id',  $order_id);
+
+
+
 
 
     //End Code Here

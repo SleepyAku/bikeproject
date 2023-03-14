@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-03-13 05:45:00
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-03-14 05:35:31
          compiled from ".\templates\checkout.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1728922098640f1accd01399-46978567%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:117876154564106a13277de8-19149987%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'a1489e51327453a85f41c60ff4f83c588d252956' => 
     array (
       0 => '.\\templates\\checkout.tpl',
-      1 => 1677506231,
+      1 => 1678717347,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1728922098640f1accd01399-46978567',
+  'nocache_hash' => '117876154564106a13277de8-19149987',
   'function' => 
   array (
   ),
@@ -37,12 +37,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'shipping_city' => 0,
     'shipping_state' => 0,
     'customer_id' => 0,
+    'subtotal' => 0,
+    'shipping' => 0,
+    'tax' => 0,
+    'grandtotal' => 0,
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_640f1accd22777_54658059',
+  'unifunc' => 'content_64106a13296c77_71186878',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_640f1accd22777_54658059')) {function content_640f1accd22777_54658059($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_64106a13296c77_71186878')) {function content_64106a13296c77_71186878($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 
 <?php echo $_smarty_tpl->getSubTemplate ("head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
@@ -321,16 +325,25 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                         <div class="card-body">
                             <h5 class="text-uppercase mb-4">Your order</h5>
                             <ul class="list-unstyled mb-0">
-                                <li class="d-flex align-items-center justify-content-between"><strong
-                                        class="small fw-bold">Red digital smartwatch</strong><span
-                                        class="text-muted small">$250</span></li>
-                                <li class="border-bottom my-2"></li>
-                                <li class="d-flex align-items-center justify-content-between"><strong
-                                        class="small fw-bold">Gray Nike running shoes</strong><span
-                                        class="text-muted small">$351</span></li>
-                                <li class="border-bottom my-2"></li>
-                                <li class="d-flex align-items-center justify-content-between"><strong
-                                        class="text-uppercase small fw-bold">Total</strong><span>$601</span></li>
+                            <li class="d-flex align-items-center justify-content-between"><strong
+                            class="text-uppercase small font-weight-bold">Subtotal</strong><span
+                            class="text-muted small">$<?php echo $_smarty_tpl->tpl_vars['subtotal']->value;?>
+</span></li>
+                    <li class="border-bottom my-2"></li>
+                    <li class="d-flex align-items-center justify-content-between"><strong
+                            class="text-uppercase small font-weight-bold">Shipping</strong><span
+                            class="text-muted small">$<?php echo $_smarty_tpl->tpl_vars['shipping']->value;?>
+</span></li>
+                    <li class="border-bottom my-2"></li>
+                    <li class="d-flex align-items-center justify-content-between"><strong
+                            class="text-uppercase small font-weight-bold">Tax</strong><span
+                            class="text-muted small">$<?php echo $_smarty_tpl->tpl_vars['tax']->value;?>
+</span></li>
+                    <li class="border-bottom my-2"></li>
+                    <li class="d-flex align-items-center justify-content-between mb-4"><strong
+                            class="text-uppercase small font-weight-bold">Total</strong><span>$<?php echo $_smarty_tpl->tpl_vars['grandtotal']->value;?>
+</span>
+                    </li>
                             </ul>
                         </div>
                     </div>

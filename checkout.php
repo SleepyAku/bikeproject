@@ -79,8 +79,31 @@ $smarty->assign('shipping_country',  $db->getFormOptionFieldByColumnName("shippi
 
 $db->closeConnection();
 
+$db = new DatabaseClass("sales.order_items",false,$global_serverName,$global_connectionInfo);
+
+$order_id = $_SESSION["order_id"];
+
+$tsql = "SELECT sum(list_price * quantity) as total from sales.order_items where order_id = ".$order_id;
+$db->Select($tsql, "order_id");    
 
 
+$subtotal = $db->getFieldByColumnName("total");
+$tax = number_format($subtotal * .1,2);
+$shipping = number_format($subtotal * .15,2);
+
+
+
+$smarty->assign('subtotal',  number_format($subtotal,2));
+
+$grandtotal = $subtotal + $tax + $shipping;
+$smarty->assign('grandtotal',  number_format($grandtotal,2));
+$db->closeConnection();
+
+
+$smarty->assign('tax',  $tax);
+$smarty->assign('shipping',  $shipping);
+
+// get the $order_id from session 
 
     //End Code Here
 

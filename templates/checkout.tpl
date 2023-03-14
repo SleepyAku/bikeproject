@@ -254,16 +254,21 @@
                         <div class="card-body">
                             <h5 class="text-uppercase mb-4">Your order</h5>
                             <ul class="list-unstyled mb-0">
-                                <li class="d-flex align-items-center justify-content-between"><strong
-                                        class="small fw-bold">Red digital smartwatch</strong><span
-                                        class="text-muted small">$250</span></li>
-                                <li class="border-bottom my-2"></li>
-                                <li class="d-flex align-items-center justify-content-between"><strong
-                                        class="small fw-bold">Gray Nike running shoes</strong><span
-                                        class="text-muted small">$351</span></li>
-                                <li class="border-bottom my-2"></li>
-                                <li class="d-flex align-items-center justify-content-between"><strong
-                                        class="text-uppercase small fw-bold">Total</strong><span>$601</span></li>
+                            <li class="d-flex align-items-center justify-content-between"><strong
+                            class="text-uppercase small font-weight-bold">Subtotal</strong><span
+                            class="text-muted small">${$subtotal}</span></li>
+                    <li class="border-bottom my-2"></li>
+                    <li class="d-flex align-items-center justify-content-between"><strong
+                            class="text-uppercase small font-weight-bold">Shipping</strong><span
+                            class="text-muted small">${$shipping}</span></li>
+                    <li class="border-bottom my-2"></li>
+                    <li class="d-flex align-items-center justify-content-between"><strong
+                            class="text-uppercase small font-weight-bold">Tax</strong><span
+                            class="text-muted small">${$tax}</span></li>
+                    <li class="border-bottom my-2"></li>
+                    <li class="d-flex align-items-center justify-content-between mb-4"><strong
+                            class="text-uppercase small font-weight-bold">Total</strong><span>${$grandtotal}</span>
+                    </li>
                             </ul>
                         </div>
                     </div>
