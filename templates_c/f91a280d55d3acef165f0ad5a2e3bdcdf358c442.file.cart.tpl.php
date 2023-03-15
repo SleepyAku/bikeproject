@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-03-13 08:09:27
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-03-14 08:06:08
          compiled from ".\templates\cart.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:767222710640f3ca72068e8-06522605%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:20930344564108d60bcf559-52358765%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'f91a280d55d3acef165f0ad5a2e3bdcdf358c442' => 
     array (
       0 => '.\\templates\\cart.tpl',
-      1 => 1678719826,
+      1 => 1678806110,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '767222710640f3ca72068e8-06522605',
+  'nocache_hash' => '20930344564108d60bcf559-52358765',
   'function' => 
   array (
   ),
@@ -24,12 +24,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'grandtotal' => 0,
     'order_id' => 0,
     'customer_id' => 0,
+    'taxrate' => 0,
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_640f3ca721f6a1_04587403',
+  'unifunc' => 'content_64108d60bebcf3_21953664',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_640f3ca721f6a1_04587403')) {function content_640f3ca721f6a1_04587403($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_64108d60bebcf3_21953664')) {function content_64108d60bebcf3_21953664($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <?php echo $_smarty_tpl->getSubTemplate ("head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
@@ -68,6 +69,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                         <div class="table-responsive mb-4">
                             <?php echo $_smarty_tpl->tpl_vars['carttable']->value;?>
 
+                            <hr>
+                            Total: <?php echo $_smarty_tpl->tpl_vars['subtotal']->value;?>
+
                         </div>
                         <!-- CART NAV-->
                         <div class="bg-light px-4 py-3">
@@ -92,18 +96,22 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                                             class="text-muted small">$<?php echo $_smarty_tpl->tpl_vars['subtotal']->value;?>
 </span></li>
                                     <li class="border-bottom my-2"></li>
+
                                     <li class="d-flex align-items-center justify-content-between"><strong
                                             class="text-uppercase small font-weight-bold">Shipping</strong><span
                                             class="text-muted small">$<?php echo $_smarty_tpl->tpl_vars['shipping']->value;?>
 </span></li>
                                     <li class="border-bottom my-2"></li>
+
                                     <li class="d-flex align-items-center justify-content-between"><strong
                                             class="text-uppercase small font-weight-bold">Tax</strong><span
                                             class="text-muted small">$<?php echo $_smarty_tpl->tpl_vars['tax']->value;?>
 </span></li>
                                     <li class="border-bottom my-2"></li>
+
                                     <li class="d-flex align-items-center justify-content-between mb-4"><strong
-                                            class="text-uppercase small font-weight-bold">Total</strong><span>$<?php echo $_smarty_tpl->tpl_vars['grandtotal']->value;?>
+                                            class="text-uppercase small font-weight-bold">Total</strong>
+                                            <span>$<?php echo $_smarty_tpl->tpl_vars['grandtotal']->value;?>
 </span>
                                     </li>
                                     <li>
@@ -120,7 +128,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 ">
                                             <input type="hidden" name="currency_code" value="USD">
                                             <input type="hidden" name="button_subtype" value="products">
-                                            <input type="hidden" name="tax_rate" value="<?php echo $_smarty_tpl->tpl_vars['tax']->value;?>
+                                            <input type="hidden" name="tax_rate" value="<?php echo $_smarty_tpl->tpl_vars['taxrate']->value;?>
 ">
                                             <input type="hidden" name="shipping" value="<?php echo $_smarty_tpl->tpl_vars['shipping']->value;?>
 ">

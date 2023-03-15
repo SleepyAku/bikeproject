@@ -34,6 +34,8 @@
                         <!-- CART TABLE-->
                         <div class="table-responsive mb-4">
                             {$carttable}
+                            <hr>
+                            Total: {$subtotal}
                         </div>
                         <!-- CART NAV-->
                         <div class="bg-light px-4 py-3">
@@ -57,16 +59,20 @@
                                             class="text-uppercase small font-weight-bold">Subtotal</strong><span
                                             class="text-muted small">${$subtotal}</span></li>
                                     <li class="border-bottom my-2"></li>
+
                                     <li class="d-flex align-items-center justify-content-between"><strong
                                             class="text-uppercase small font-weight-bold">Shipping</strong><span
                                             class="text-muted small">${$shipping}</span></li>
                                     <li class="border-bottom my-2"></li>
+
                                     <li class="d-flex align-items-center justify-content-between"><strong
                                             class="text-uppercase small font-weight-bold">Tax</strong><span
                                             class="text-muted small">${$tax}</span></li>
                                     <li class="border-bottom my-2"></li>
+
                                     <li class="d-flex align-items-center justify-content-between mb-4"><strong
-                                            class="text-uppercase small font-weight-bold">Total</strong><span>${$grandtotal}</span>
+                                            class="text-uppercase small font-weight-bold">Total</strong>
+                                            <span>${$grandtotal}</span>
                                     </li>
                                     <li>
                                         <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr"
@@ -79,7 +85,7 @@
                                             <input type="hidden" name="amount" value="{$subtotal}">
                                             <input type="hidden" name="currency_code" value="USD">
                                             <input type="hidden" name="button_subtype" value="products">
-                                            <input type="hidden" name="tax_rate" value="{$tax}">
+                                            <input type="hidden" name="tax_rate" value="{$taxrate}">
                                             <input type="hidden" name="shipping" value="{$shipping}">
                                             <input type="hidden" name="add" value="1">
                                             <input type="hidden" name="bn"

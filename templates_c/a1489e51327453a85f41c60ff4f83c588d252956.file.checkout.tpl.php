@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-03-14 05:35:31
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-03-14 08:04:12
          compiled from ".\templates\checkout.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:117876154564106a13277de8-19149987%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:117529603864108cec950323-80202591%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'a1489e51327453a85f41c60ff4f83c588d252956' => 
     array (
       0 => '.\\templates\\checkout.tpl',
-      1 => 1678717347,
+      1 => 1678806242,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '117876154564106a13277de8-19149987',
+  'nocache_hash' => '117529603864108cec950323-80202591',
   'function' => 
   array (
   ),
@@ -44,9 +44,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_64106a13296c77_71186878',
+  'unifunc' => 'content_64108cec96e8d5_11515727',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_64106a13296c77_71186878')) {function content_64106a13296c77_71186878($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_64108cec96e8d5_11515727')) {function content_64108cec96e8d5_11515727($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 
 <?php echo $_smarty_tpl->getSubTemplate ("head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
@@ -311,7 +311,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
                 <div class="text-center">
                     <button type="submit" value="Save" id="save" name="save"
-                        class="btn btn-primary">Save Changes</button>    
+                        class="btn btn-primary">Place Order</button>    
 
                     
                 </div>

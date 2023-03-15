@@ -16,6 +16,7 @@
     $db->mode = "edit";
     
     $username = $_SESSION["username"];
+    $order_id = $_SESSION["order_id"];
     
     $tsql = "select customer_id,first_name, last_name, email, phone, street, street2, company_name, country, city, state, shipping_first_name, shipping_last_name, shipping_phone, shipping_street1, shipping_street2, shipping_company_name, shipping_country, shipping_city, shipping_state from sales.customers where email = '" . $username . "'";
    

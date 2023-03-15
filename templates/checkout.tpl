@@ -101,7 +101,7 @@
             <h2 class="h5 text-uppercase mb-4">Billing details</h2>
             <div class="row">
                 <div class="col-lg-8">
-                <form action="checkout.php" method="POST">
+                <form action="index.php" method="POST">
                 <div class="row gy-3">
                     <div class="col-lg-6">
                 <label class="form-label text-sm text-uppercase" for="firstName">First name
@@ -240,7 +240,7 @@
 
                 <div class="text-center">
                     <button type="submit" value="Save" id="save" name="save"
-                        class="btn btn-primary">Save Changes</button>    
+                        class="btn btn-primary">Place Order</button>    
 
                     
                 </div>
