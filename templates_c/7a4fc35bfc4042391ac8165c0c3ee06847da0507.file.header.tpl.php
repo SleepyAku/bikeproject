@@ -1,30 +1,31 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-03-15 05:38:21
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-03-17 05:35:56
          compiled from ".\templates\header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:7817546356411bc3db94d00-86675968%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:103285180464145eac5d88d9-04430313%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '7a4fc35bfc4042391ac8165c0c3ee06847da0507' => 
     array (
       0 => '.\\templates\\header.tpl',
-      1 => 1675693942,
+      1 => 1678887300,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '7817546356411bc3db94d00-86675968',
+  'nocache_hash' => '103285180464145eac5d88d9-04430313',
   'function' => 
   array (
   ),
   'variables' => 
   array (
     'accountdropdown' => 0,
+    'admindropdown' => 0,
     'loginbutton' => 0,
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_6411bc3db972a7_60208956',
+  'unifunc' => 'content_64145eac5dc398_19582118',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_6411bc3db972a7_60208956')) {function content_6411bc3db972a7_60208956($_smarty_tpl) {?><header class="header bg-white">
+<?php if ($_valid && !is_callable('content_64145eac5dc398_19582118')) {function content_64145eac5dc398_19582118($_smarty_tpl) {?><header class="header bg-white">
 <div class="container px-lg-3">
   <nav class="navbar navbar-expand-lg navbar-light py-3 px-lg-0"><a class="navbar-brand" href="index.php"><span
         class="fw-bold text-uppercase text-dark">Bike Store</span></a>
@@ -43,10 +44,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <!-- Link--><a class="nav-link" href="about.php">About</a>
       </li>
       <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" id="pagesDropdown" href="#" style="visibility: <?php echo $_smarty_tpl->tpl_vars['accountdropdown']->value;?>
+      <a class="nav-link dropdown-toggle" id="accountDropdown" href="#" style="visibility: <?php echo $_smarty_tpl->tpl_vars['accountdropdown']->value;?>
 "
         data-bs-toggle="dropdown" aria-haspopup="false" aria-expanded="false">Account</a>
-      <div class="dropdown-menu mt-3 shadow-sm" aria-labelledby="pagesDropdown"><a
+      <div class="dropdown-menu mt-3 shadow-sm" aria-labelledby="accountDropdown"><a
           class="dropdown-item border-0 transition-link" href="profile.php">Profile</a><a
           class="dropdown-item border-0 transition-link" href="shop.php">Shop</a><a
           class="dropdown-item border-0 transition-link" href="cart.php">Shopping cart</a><a
@@ -54,6 +55,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <a class="dropdown-item border-0 transition-link" href="about.php">About</a>
       </div>
     </li>
+    <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" id="adminDropdown" href="#" style="visibility: <?php echo $_smarty_tpl->tpl_vars['admindropdown']->value;?>
+"
+      data-bs-toggle="dropdown" aria-haspopup="false" aria-expanded="false">Admin</a>
+    <div class="dropdown-menu mt-3 shadow-sm" aria-labelledby="adminDropdown"><a
+        class="dropdown-item border-0 transition-link" href="customers.php">Customers</a><a
+        class="dropdown-item border-0 transition-link" href="orders.php">Orders</a><a
+        class="dropdown-item border-0 transition-link" href="products.php">Products</a><a
+        class="dropdown-item border-0 transition-link" href="categories.php">Categories</a>
+      <a class="dropdown-item border-0 transition-link" href="brands.php">Brands</a>
+    </div>
+  </li>
   </ul>
   <ul class="navbar-nav ms-auto">
     <li class="nav-item"><a class="nav-link" href="cart.php" style="visibility: <?php echo $_smarty_tpl->tpl_vars['accountdropdown']->value;?>

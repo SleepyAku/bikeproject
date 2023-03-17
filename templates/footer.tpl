@@ -53,6 +53,19 @@
         </script>
         
         <script>
+        $(document).ready(function() {
+            $('#example').DataTable();
+        });
+        </script>
+    
+    
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.13.3/js/dataTables.bootstrap4.min.js"></script>
+
+
+
+        <script>
             // ------------------------------------------------------- //
             //   Inject SVG Sprite - 
             //   see more here 
@@ -108,6 +121,8 @@ integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9
         }
 
 
+        var isadmin = false;
+
         function updatelogin() {
         
        
@@ -127,13 +142,23 @@ integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9
 
 
         //This will set the Account menu item to show after a login
-        var apagesDropdown = document.getElementById("pagesDropdown");
+        var apagesDropdown = document.getElementById("accountDropdown");
         apagesDropdown.style.visibility = "visible";
 
 
 
         document.getElementById("login").innerText = "Logout";
         sessionStorage.setItem("username", userName);
+
+        console.log("isadmin: " + isadmin);
+
+        if (isadmin == true) {
+            var adminDropdown = document.getElementById("adminDropdown");
+            adminDropdown.style.visibility = "visible";
+        } else {
+            var adminDropdown = document.getElementById("adminDropdown");
+            adminDropdown.style.visibility = "hidden";
+        }
 
 
         $('#mylogin').modal('hide');
@@ -169,27 +194,31 @@ integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9
                   user: arguserName,
                   password: argpassword,
               },
-              success: function (data) {
-                
-                data = data.trim();
-                
-               console.log("checkLogin data: "+data);
-                  if (data == "0") {
-                      strreturnlogin = false;
-                 
-                  } else if (data == "error") {
-                      strreturnlogin = false;
-                  
-                  }
-                  else 
-                  {
-                      strreturnlogin = true;
-                      userName = arguserName;
-                   
-                  }
-  
-  
-                  return strreturnlogin;
+
+              success: function(data) {
+
+                        data = data.replace(/^\s+|\s+$/g, '');
+                        console.log("checkLogin data:[" + data + "]");
+
+
+                        if (data.trim() == "0") {
+                            strreturnlogin = false;
+
+                        } else if (data.trim() == "error") {
+                            strreturnlogin = false;
+
+                        } else {
+                            strreturnlogin = true;
+                            userName = arguserName;
+                            if (data.trim() == "admin")
+                                isadmin = true;
+                            else
+                                isadmin = false;
+
+                        }
+
+
+                        return strreturnlogin;
   
                  
               },

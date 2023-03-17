@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-03-15 05:38:21
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-03-17 05:35:56
          compiled from ".\templates\footer.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:10451998746411bc3dba27b0-43296389%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:127514538264145eac5e2a79-79499712%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'eb93922a3327546f6c1b40a96d2881f9f921a3ff' => 
     array (
       0 => '.\\templates\\footer.tpl',
-      1 => 1675694990,
+      1 => 1678972376,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '10451998746411bc3dba27b0-43296389',
+  'nocache_hash' => '127514538264145eac5e2a79-79499712',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_6411bc3dba6157_81686176',
+  'unifunc' => 'content_64145eac5e5b60_78220521',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_6411bc3dba6157_81686176')) {function content_6411bc3dba6157_81686176($_smarty_tpl) {?><footer class="bg-dark text-white">
+<?php if ($_valid && !is_callable('content_64145eac5e5b60_78220521')) {function content_64145eac5e5b60_78220521($_smarty_tpl) {?><footer class="bg-dark text-white">
             <div class="container py-4">
                 <div class="row py-5">
                     <div class="col-md-4 mb-3 mb-md-0">
@@ -85,6 +85,27 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         
         <?php echo '<script'; ?>
 >
+        $(document).ready(function() {
+            $('#example').DataTable();
+        });
+        <?php echo '</script'; ?>
+>
+    
+    
+        <?php echo '<script'; ?>
+ src="https://code.jquery.com/jquery-3.5.1.js"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="https://cdn.datatables.net/1.13.3/js/dataTables.bootstrap4.min.js"><?php echo '</script'; ?>
+>
+
+
+
+        <?php echo '<script'; ?>
+>
             // ------------------------------------------------------- //
             //   Inject SVG Sprite - 
             //   see more here 
@@ -142,6 +163,8 @@ integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9
         }
 
 
+        var isadmin = false;
+
         function updatelogin() {
         
        
@@ -161,13 +184,23 @@ integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9
 
 
         //This will set the Account menu item to show after a login
-        var apagesDropdown = document.getElementById("pagesDropdown");
+        var apagesDropdown = document.getElementById("accountDropdown");
         apagesDropdown.style.visibility = "visible";
 
 
 
         document.getElementById("login").innerText = "Logout";
         sessionStorage.setItem("username", userName);
+
+        console.log("isadmin: " + isadmin);
+
+        if (isadmin == true) {
+            var adminDropdown = document.getElementById("adminDropdown");
+            adminDropdown.style.visibility = "visible";
+        } else {
+            var adminDropdown = document.getElementById("adminDropdown");
+            adminDropdown.style.visibility = "hidden";
+        }
 
 
         $('#mylogin').modal('hide');
@@ -203,27 +236,31 @@ integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9
                   user: arguserName,
                   password: argpassword,
               },
-              success: function (data) {
-                
-                data = data.trim();
-                
-               console.log("checkLogin data: "+data);
-                  if (data == "0") {
-                      strreturnlogin = false;
-                 
-                  } else if (data == "error") {
-                      strreturnlogin = false;
-                  
-                  }
-                  else 
-                  {
-                      strreturnlogin = true;
-                      userName = arguserName;
-                   
-                  }
-  
-  
-                  return strreturnlogin;
+
+              success: function(data) {
+
+                        data = data.replace(/^\s+|\s+$/g, '');
+                        console.log("checkLogin data:[" + data + "]");
+
+
+                        if (data.trim() == "0") {
+                            strreturnlogin = false;
+
+                        } else if (data.trim() == "error") {
+                            strreturnlogin = false;
+
+                        } else {
+                            strreturnlogin = true;
+                            userName = arguserName;
+                            if (data.trim() == "admin")
+                                isadmin = true;
+                            else
+                                isadmin = false;
+
+                        }
+
+
+                        return strreturnlogin;
   
                  
               },
