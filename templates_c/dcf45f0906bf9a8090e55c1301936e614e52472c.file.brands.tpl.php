@@ -1,29 +1,29 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-03-17 05:35:50
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-03-30 06:57:30
          compiled from ".\templates\brands.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:163756978264145ea6d200a1-38071400%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:13574857176425954ad01636-26765265%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'dcf45f0906bf9a8090e55c1301936e614e52472c' => 
     array (
       0 => '.\\templates\\brands.tpl',
-      1 => 1678974437,
+      1 => 1680012354,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '163756978264145ea6d200a1-38071400',
+  'nocache_hash' => '13574857176425954ad01636-26765265',
   'function' => 
   array (
   ),
   'variables' => 
   array (
-    'customers' => 0,
+    'brands' => 0,
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_64145ea6d37e17_25104059',
+  'unifunc' => 'content_6425954ad18dc4_60522917',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_64145ea6d37e17_25104059')) {function content_64145ea6d37e17_25104059($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_6425954ad18dc4_60522917')) {function content_6425954ad18dc4_60522917($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <?php echo $_smarty_tpl->getSubTemplate ("head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
@@ -59,12 +59,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 <thead>
                     <tr>
                         <th scope="col">Edit</th>
-                        <th scope="col">Brands</th>
+                        <th scope="col">Brand Name</th>
                     </tr>
                 </thead>
                 <tbody>
 
-                    <?php echo $_smarty_tpl->tpl_vars['customers']->value;?>
+                    <?php echo $_smarty_tpl->tpl_vars['brands']->value;?>
 
 
                 </tbody>

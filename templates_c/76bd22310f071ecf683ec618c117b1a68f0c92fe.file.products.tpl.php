@@ -1,25 +1,29 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-03-17 05:35:54
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-03-30 06:56:05
          compiled from ".\templates\products.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:110533053664145eaaed5784-99757497%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:631338595642594f59a6da5-74027818%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '76bd22310f071ecf683ec618c117b1a68f0c92fe' => 
     array (
       0 => '.\\templates\\products.tpl',
-      1 => 1678892451,
+      1 => 1680015939,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '110533053664145eaaed5784-99757497',
+  'nocache_hash' => '631338595642594f59a6da5-74027818',
   'function' => 
   array (
   ),
+  'variables' => 
+  array (
+    'products' => 0,
+  ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_64145eaaeec762_95220976',
+  'unifunc' => 'content_642594f59bd901_01773142',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_64145eaaeec762_95220976')) {function content_64145eaaeec762_95220976($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_642594f59bd901_01773142')) {function content_642594f59bd901_01773142($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <?php echo $_smarty_tpl->getSubTemplate ("head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
@@ -50,7 +54,28 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 </div>
             </section>
 
+            <br>
+            <table id="example" class="table table-striped table-bordered datatable">
+                <thead>
+                    <tr>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Product Name</th>
+                        <th scope="col">Brand Name</th>
+                        <th scope="col">Category Name</th>
+                        <th scope="col">Model Year</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">SKU</th>
+                    </tr>
+                </thead>
+                <tbody>
 
+                    <?php echo $_smarty_tpl->tpl_vars['products']->value;?>
+
+
+                </tbody>
+            </table>
+            <br><br>
 
 
 

@@ -32,12 +32,12 @@
                 <thead>
                     <tr>
                         <th scope="col">Edit</th>
-                        <th scope="col">Brands</th>
+                        <th scope="col">Brand Name</th>
                     </tr>
                 </thead>
                 <tbody>
 
-                    {$customers}
+                    {$brands}
 
                 </tbody>
             </table>

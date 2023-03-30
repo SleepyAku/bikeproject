@@ -27,7 +27,27 @@
                 </div>
             </section>
 
+            <br>
+            <table id="example" class="table table-striped table-bordered datatable">
+                <thead>
+                    <tr>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Product Name</th>
+                        <th scope="col">Brand Name</th>
+                        <th scope="col">Category Name</th>
+                        <th scope="col">Model Year</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">SKU</th>
+                    </tr>
+                </thead>
+                <tbody>
 
+                    {$products}
+
+                </tbody>
+            </table>
+            <br><br>
 
 
 

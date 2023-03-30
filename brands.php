@@ -14,7 +14,7 @@ $customers = "";
 $db = new DatabaseClass("production.brands",false,$global_serverName,$global_connectionInfo);
 
 // Change the SQL , order matters
-$tsql = "Select brand_id, brand_name from production.brands";
+$tsql = "Select brand_id, brand_name from production.brands order by brand_name";
 
 
 //echo "<Br><Br><br>.................." . $tsql;
@@ -23,11 +23,11 @@ $tsql = "Select brand_id, brand_name from production.brands";
 $db->Select($tsql, "brand_id");
 
 // add array of field name
-$customers = $db->getGrid(['brand_id','brand_name'], "brandsedit.php");
+$brands = $db->getGrid(['brand_id','brand_name'], "brandsedit.php");
 
 $db->closeConnection();
 
-$smarty->assign('customers', $customers);
+$smarty->assign('brands', $brands);
 
 
 

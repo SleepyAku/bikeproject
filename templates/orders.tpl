@@ -28,8 +28,28 @@
                     </div>
                 </div>
             </section>
-        </div>
 
+
+            <table id="example" class="table table-striped table-bordered datatable">
+                <thead>
+                    <tr>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Customer Name</th>
+                        <th scope="col">Order Status</th>
+                        <th scope="col">Order Date</th>
+                        <th scope="col">Required Date</th>
+                        <th scope="col">Shipping Date</th>
+                        <th scope="col">Store Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {$orders}
+
+                </tbody>
+            </table>
+            <br><br>
+        </div>
 
         {include file="footer.tpl"}
     </div>

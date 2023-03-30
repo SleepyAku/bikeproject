@@ -27,7 +27,21 @@
                 </div>
             </section>
 
+            <br>
+            <table id="example" class="table table-striped table-bordered datatable">
+                <thead>
+                    <tr>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Category Name</th>
+                    </tr>
+                </thead>
+                <tbody>
 
+                    {$categories}
+
+                </tbody>
+            </table>
+            <br><br>
 
 
 

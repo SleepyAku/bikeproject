@@ -1,25 +1,29 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-03-17 05:35:53
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-03-30 06:48:04
          compiled from ".\templates\orders.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:93367162464145ea9bfda02-25956012%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:10827838356425931452b8f8-59962437%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'bcae3e6db107e17f92dfed154d092898c8ef0c1c' => 
     array (
       0 => '.\\templates\\orders.tpl',
-      1 => 1678892538,
+      1 => 1680095323,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '93367162464145ea9bfda02-25956012',
+  'nocache_hash' => '10827838356425931452b8f8-59962437',
   'function' => 
   array (
   ),
+  'variables' => 
+  array (
+    'orders' => 0,
+  ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_64145ea9c14014_16276828',
+  'unifunc' => 'content_64259314542ca9_46354326',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_64145ea9c14014_16276828')) {function content_64145ea9c14014_16276828($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_64259314542ca9_46354326')) {function content_64259314542ca9_46354326($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 
 <?php echo $_smarty_tpl->getSubTemplate ("head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
@@ -51,8 +55,29 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     </div>
                 </div>
             </section>
-        </div>
 
+
+            <table id="example" class="table table-striped table-bordered datatable">
+                <thead>
+                    <tr>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Customer Name</th>
+                        <th scope="col">Order Status</th>
+                        <th scope="col">Order Date</th>
+                        <th scope="col">Required Date</th>
+                        <th scope="col">Shipping Date</th>
+                        <th scope="col">Store Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <?php echo $_smarty_tpl->tpl_vars['orders']->value;?>
+
+
+                </tbody>
+            </table>
+            <br><br>
+        </div>
 
         <?php echo $_smarty_tpl->getSubTemplate ("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
@@ -60,5 +85,4 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </body>
 
 
-</html>
-<?php }} ?>
+</html><?php }} ?>

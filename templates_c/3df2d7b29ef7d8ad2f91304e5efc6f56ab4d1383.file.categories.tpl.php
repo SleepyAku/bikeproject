@@ -1,25 +1,29 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-03-17 05:35:56
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-03-30 06:55:59
          compiled from ".\templates\categories.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:93506309064145eac59f453-00131972%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1331485375642594ef0c8bf8-14805547%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '3df2d7b29ef7d8ad2f91304e5efc6f56ab4d1383' => 
     array (
       0 => '.\\templates\\categories.tpl',
-      1 => 1678892455,
+      1 => 1679929692,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '93506309064145eac59f453-00131972',
+  'nocache_hash' => '1331485375642594ef0c8bf8-14805547',
   'function' => 
   array (
   ),
+  'variables' => 
+  array (
+    'categories' => 0,
+  ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_64145eac5c90f6_68675912',
+  'unifunc' => 'content_642594ef0df409_16599688',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_64145eac5c90f6_68675912')) {function content_64145eac5c90f6_68675912($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_642594ef0df409_16599688')) {function content_642594ef0df409_16599688($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <?php echo $_smarty_tpl->getSubTemplate ("head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
@@ -50,7 +54,22 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 </div>
             </section>
 
+            <br>
+            <table id="example" class="table table-striped table-bordered datatable">
+                <thead>
+                    <tr>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Category Name</th>
+                    </tr>
+                </thead>
+                <tbody>
 
+                    <?php echo $_smarty_tpl->tpl_vars['categories']->value;?>
+
+
+                </tbody>
+            </table>
+            <br><br>
 
 
 
