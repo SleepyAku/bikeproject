@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-03-30 06:57:26
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-03-31 07:20:22
          compiled from ".\templates\brandsedit.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:106821488364259546086b23-45441324%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:6767392006426ec26bd1c16-31043115%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '3ce1c7fdf756b9a01534be520ee1994bd9771533' => 
     array (
       0 => '.\\templates\\brandsedit.tpl',
-      1 => 1680183018,
+      1 => 1680185400,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '106821488364259546086b23-45441324',
+  'nocache_hash' => '6767392006426ec26bd1c16-31043115',
   'function' => 
   array (
   ),
@@ -22,9 +22,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_6425954609e0a6_14554272',
+  'unifunc' => 'content_6426ec26be9d13_79528552',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_6425954609e0a6_14554272')) {function content_6425954609e0a6_14554272($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_6426ec26be9d13_79528552')) {function content_6426ec26be9d13_79528552($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 
 <?php echo $_smarty_tpl->getSubTemplate ("head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
@@ -39,18 +39,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
         <div class="container">
 
-        <form action="brandsedit.php?brand_id=<?php echo $_smarty_tpl->tpl_vars['brand_id']->value;?>
+            <form action="brandsedit.php?brand_id=<?php echo $_smarty_tpl->tpl_vars['brand_id']->value;?>
 " method="POST">
-        <div class="row gy-3">
-            <div class="col-lg-6">
-                <label class="form-label text-sm text-uppercase" for="firstName">Brand Name
-                </label>
+                <div class="row gy-3">
+                    <div class="col-lg-6">
+                        <label class="form-label text-sm text-uppercase" for="firstName">Brand Name
+                        </label>
 
-                <?php echo $_smarty_tpl->tpl_vars['brand_name']->value;?>
+                        <?php echo $_smarty_tpl->tpl_vars['brand_name']->value;?>
 
-            </div>
+                    </div>
 
-            <div class="col-lg-12 form-group">
+                    <div class="col-lg-12 form-group">
                         <input type="hidden" value="<?php echo $_smarty_tpl->tpl_vars['brand_id']->value;?>
 " id="brand_id" name="brand_id" />
 
@@ -80,5 +80,4 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </body>
 
 
-</html>
-<?php }} ?>
+</html><?php }} ?>

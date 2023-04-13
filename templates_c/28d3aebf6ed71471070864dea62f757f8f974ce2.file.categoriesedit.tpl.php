@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-03-30 06:39:04
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-03-30 08:10:05
          compiled from ".\templates\categoriesedit.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:199152676642590f85d5d03-25212680%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:20965253966425a64d589ff5-07125201%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '28d3aebf6ed71471070864dea62f757f8f974ce2' => 
     array (
       0 => '.\\templates\\categoriesedit.tpl',
-      1 => 1680182985,
+      1 => 1680185400,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '199152676642590f85d5d03-25212680',
+  'nocache_hash' => '20965253966425a64d589ff5-07125201',
   'function' => 
   array (
   ),
@@ -22,9 +22,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_642590f85ed063_92981961',
+  'unifunc' => 'content_6425a64d5a7283_95700829',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_642590f85ed063_92981961')) {function content_642590f85ed063_92981961($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_6425a64d5a7283_95700829')) {function content_6425a64d5a7283_95700829($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 
 <?php echo $_smarty_tpl->getSubTemplate ("head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
@@ -59,9 +59,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                             <button type="submit" value="Save" id="save" name="save" class="btn btn-primary">Save
                                 Changes</button>    
 
-                            <a class="btn btn-secondary" href="categoriesedit.php?remove=true&category_id=<?php echo $_smarty_tpl->tpl_vars['category_id']->value;?>
-"
-                                role="button">Remove
+                            <a class="btn btn-secondary"
+                                href="categoriesedit.php?remove=true&category_id=<?php echo $_smarty_tpl->tpl_vars['category_id']->value;?>
+" role="button">Remove
                             </a>
                         </div>
                     </div>

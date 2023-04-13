@@ -50,7 +50,7 @@ if ( $_POST['save'] == "Save" ) {
 $smarty->assign('brand_id',  $db->getFieldByColumnName("brand_id"));
 
 
-$smarty->assign('brand_name',  $db->getFormOptionFieldByColumnName("brand_name", $db->getFieldByColumnName("brand_name"), "SELECT brand_id,brand_name from production.brands order by brand_name "));
+$smarty->assign('brand_name',  $db->getFormFieldByColumnName("brand_name",true));
 
 
     $db->closeConnection();

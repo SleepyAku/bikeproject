@@ -51,7 +51,7 @@ if ( $_POST['save'] == "Save" ) {
 $smarty->assign('category_id',  $db->getFieldByColumnName("category_id"));
 
 
-$smarty->assign('category_name',  $db->getFormOptionFieldByColumnName("category_name", $db->getFieldByColumnName("category_name"), "SELECT category_id,category_name from production.categories order by category_name "));
+$smarty->assign('category_name',  $db->getFormFieldByColumnName("category_name",true));
 
 
 

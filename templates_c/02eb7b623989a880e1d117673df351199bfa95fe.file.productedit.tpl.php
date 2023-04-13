@@ -1,25 +1,37 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-03-30 06:30:44
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2023-03-31 06:01:19
          compiled from ".\templates\productedit.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:73800045764258f0429d249-00104563%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:16789712236426d99faa9260-61513807%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '02eb7b623989a880e1d117673df351199bfa95fe' => 
     array (
       0 => '.\\templates\\productedit.tpl',
-      1 => 1675699112,
+      1 => 1680267644,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '73800045764258f0429d249-00104563',
+  'nocache_hash' => '16789712236426d99faa9260-61513807',
   'function' => 
   array (
   ),
+  'variables' => 
+  array (
+    'product_id' => 0,
+    'product_name' => 0,
+    'brand_id' => 0,
+    'category_id' => 0,
+    'model_year' => 0,
+    'list_price' => 0,
+    'description' => 0,
+    'sku' => 0,
+    'tags' => 0,
+  ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_64258f042b1ef2_40743842',
+  'unifunc' => 'content_6426d99fac3583_75226549',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_64258f042b1ef2_40743842')) {function content_64258f042b1ef2_40743842($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_6426d99fac3583_75226549')) {function content_6426d99fac3583_75226549($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 
 <?php echo $_smarty_tpl->getSubTemplate ("head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
@@ -35,7 +47,91 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <div class="container">
 
 
-            //html code here
+        <form action="productsedit.php?product_id=<?php echo $_smarty_tpl->tpl_vars['product_id']->value;?>
+" method="POST">
+        <div class="row gy-3">
+            <div class="col-lg-6">
+                <label class="form-label text-sm text-uppercase" for="firstName">Product Name
+                </label>
+
+                <?php echo $_smarty_tpl->tpl_vars['product_name']->value;?>
+
+            </div>
+            
+            <div class="col-lg-6">
+                <label class="form-label text-sm text-uppercase" for="firstName">Brand
+                </label>
+
+                <?php echo $_smarty_tpl->tpl_vars['brand_id']->value;?>
+
+            </div>
+            
+            <div class="col-lg-6">
+                <label class="form-label text-sm text-uppercase" for="firstName">Category
+                </label>
+
+                <?php echo $_smarty_tpl->tpl_vars['category_id']->value;?>
+
+            </div>
+            
+            <div class="col-lg-6">
+                <label class="form-label text-sm text-uppercase" for="firstName">Model Year
+                </label>
+
+                <?php echo $_smarty_tpl->tpl_vars['model_year']->value;?>
+
+            </div>
+            
+            <div class="col-lg-6">
+                <label class="form-label text-sm text-uppercase" for="firstName">Price
+                </label>
+
+                <?php echo $_smarty_tpl->tpl_vars['list_price']->value;?>
+
+            </div>
+            
+            <div class="col-lg-6">
+                <label class="form-label text-sm text-uppercase" for="firstName">Description
+                </label>
+
+                <?php echo $_smarty_tpl->tpl_vars['description']->value;?>
+
+            </div>
+            
+            <div class="col-lg-6">
+                <label class="form-label text-sm text-uppercase" for="firstName">SKU
+                </label>
+
+                <?php echo $_smarty_tpl->tpl_vars['sku']->value;?>
+
+                
+            <div class="col-lg-6">
+                <label class="form-label text-sm text-uppercase" for="firstName">Tags
+                </label>
+
+                <?php echo $_smarty_tpl->tpl_vars['tags']->value;?>
+
+            </div>
+            </div>
+
+            <div class="col-lg-12 form-group">
+                <input type="hidden" value="<?php echo $_smarty_tpl->tpl_vars['product_id']->value;?>
+" id="product_id" name="product_id" />
+
+
+
+                <div class="text-center">
+                    <button type="submit" value="Save" id="save" name="save" class="btn btn-primary">Save
+                        Changes</button>    
+
+                    <a class="btn btn-secondary" href="productsedit.php?remove=true&product_id=<?php echo $_smarty_tpl->tpl_vars['product_id']->value;?>
+"
+                        role="button">Remove
+                    </a>
+                </div>
+            </div>
+        </div>
+    </form>
 
 
 
