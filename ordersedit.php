@@ -20,11 +20,11 @@
     $db->mode = "edit";
     
     $order_id = $_GET["order_id"];
-    
+    //FORMAT([DATEFIELD], 'yyyy-MM-dd')  as [DATEFIELDNAME]
     $tsql = "select order_id,customer_id,order_status,
-    cast(order_date as varchar) AS order_date,
-    cast(required_date as varchar) AS required_date,
-    cast(shipped_date as varchar) AS shipped_date,
+    FORMAT(order_date, 'yyyy-MM-dd') AS order_date,
+    FORMAT(required_date, 'yyyy-MM-dd') AS required_date,
+    FORMAT(shipped_date, 'yyyy-MM-dd') AS shipped_date,
     store_id, staff_id from sales.orders where order_id = '" . $order_id . "'";
    
     
@@ -57,10 +57,14 @@ if ( $_POST['save'] == "Save" ) {
 
 $smarty->assign('order_id',  $db->getFieldByColumnName("order_id"));
 
+
+
+
+
 //$smarty->assign('order_id',  $db->getFormFieldByColumnName("order_id",true));
 $smarty->assign('customer_id',  $db->getFormFieldByColumnName("customer_id",true));
 $smarty->assign('order_status',  $db->getFormFieldByColumnName("order_status",true, '',false));
-$smarty->assign('order_date',  $db->getFormDateFieldByColumnName("order_date",true));
+$smarty->assign('order_date',  $db->getFormDateFieldByColumnName("order_date",false));
 $smarty->assign('required_date',  $db->getFormDateFieldByColumnName("required_date",true));
 $smarty->assign('shipped_date',  $db->getFormDateFieldByColumnName("shipped_date",true));
 $smarty->assign('store_id',  $db->getFormOptionFieldByColumnName("store_id", $db->getFieldByColumnName("store_id"), "SELECT store_id, store_name  FROM sales.stores ORDER BY store_name "));

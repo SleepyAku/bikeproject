@@ -60,7 +60,35 @@ $smarty->assign('category_id',  $db->getFormFieldByColumnName("category_id"));
 $smarty->assign('model_year',  $db->getFormFieldByColumnName("model_year",true));
 $smarty->assign('list_price',  $db->getFormFieldByColumnName("list_price",true));
 $smarty->assign('description',  $db->getFormFieldByColumnName("description",true));
-$smarty->assign('sku',  $db->getFormFieldByColumnName("tags",true));
+$smarty->assign('sku',  $db->getFormFieldByColumnName("sku",true));
+$smarty->assign('tags',  $db->getFormFieldByColumnName("tags",true));
+
+
+
+$stock = "";
+
+// Change table name
+$db = new DatabaseClass("sales.stores",false,$global_serverName,$global_connectionInfo);
+
+// Change the SQL , order matters
+$tsql = "select st.stock_id, s.store_name, st.quantity
+from sales.stores s
+inner join production.stocks st 
+	on st.store_id = s.store_id and st.product_id = " . $product_id . " 
+order by s.store_id";
+
+
+//echo "<Br><Br><br>.................." . $tsql;
+
+// Change to primary key of table
+$db->Select($tsql, "stock_id");
+
+// add array of field name
+$stock = $db->getGrid(['stock_id','store_name','quantity'], "stockedit.php");
+
+
+
+$smarty->assign('stock', $stock);
 
 
     $db->closeConnection();

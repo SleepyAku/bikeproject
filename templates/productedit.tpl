@@ -12,80 +12,99 @@
         <div class="container">
 
 
-        <form action="productsedit.php?product_id={$product_id}" method="POST">
-        <div class="row gy-3">
-            <div class="col-lg-6">
-                <label class="form-label text-sm text-uppercase" for="firstName">Product Name
-                </label>
+            <form action="productsedit.php?product_id={$product_id}" method="POST">
+                <div class="row gy-3">
+                    <div class="col-lg-6">
+                        <label class="form-label text-sm text-uppercase" for="firstName">Product Name
+                        </label>
 
-                {$product_name}
-            </div>
-            
-            <div class="col-lg-6">
-                <label class="form-label text-sm text-uppercase" for="firstName">Brand
-                </label>
+                        {$product_name}
+                    </div>
 
-                {$brand_id}
-            </div>
-            
-            <div class="col-lg-6">
-                <label class="form-label text-sm text-uppercase" for="firstName">Category
-                </label>
+                    <div class="col-lg-6">
+                        <label class="form-label text-sm text-uppercase" for="firstName">Brand
+                        </label>
 
-                {$category_id}
-            </div>
-            
-            <div class="col-lg-6">
-                <label class="form-label text-sm text-uppercase" for="firstName">Model Year
-                </label>
+                        {$brand_id}
+                    </div>
 
-                {$model_year}
-            </div>
-            
-            <div class="col-lg-6">
-                <label class="form-label text-sm text-uppercase" for="firstName">Price
-                </label>
+                    <div class="col-lg-6">
+                        <label class="form-label text-sm text-uppercase" for="firstName">Category
+                        </label>
 
-                {$list_price}
-            </div>
-            
-            <div class="col-lg-6">
-                <label class="form-label text-sm text-uppercase" for="firstName">Description
-                </label>
+                        {$category_id}
+                    </div>
 
-                {$description}
-            </div>
-            
-            <div class="col-lg-6">
-                <label class="form-label text-sm text-uppercase" for="firstName">SKU
-                </label>
+                    <div class="col-lg-6">
+                        <label class="form-label text-sm text-uppercase" for="firstName">Model Year
+                        </label>
 
-                {$sku}
-                
-            <div class="col-lg-6">
-                <label class="form-label text-sm text-uppercase" for="firstName">Tags
-                </label>
+                        {$model_year}
+                    </div>
 
-                {$tags}
-            </div>
-            </div>
+                    <div class="col-lg-6">
+                        <label class="form-label text-sm text-uppercase" for="firstName">Price
+                        </label>
 
-            <div class="col-lg-12 form-group">
-                <input type="hidden" value="{$product_id}" id="product_id" name="product_id" />
+                        {$list_price}
+                    </div>
+
+                    <div class="col-lg-6">
+                        <label class="form-label text-sm text-uppercase" for="firstName">Description
+                        </label>
+
+                        {$description}
+                    </div>
+
+                    <div class="col-lg-6">
+                        <label class="form-label text-sm text-uppercase" for="firstName">SKU
+                        </label>
+
+                        {$sku}
+
+                        <div class="col-lg-6">
+                            <label class="form-label text-sm text-uppercase" for="firstName">Tags
+                            </label>
+
+                            {$tags}
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 form-group">
+                        <input type="hidden" value="{$product_id}" id="product_id" name="product_id" />
 
 
 
-                <div class="text-center">
-                    <button type="submit" value="Save" id="save" name="save" class="btn btn-primary">Save
-                        Changes</button>    
+                        <div class="text-center">
+                            <button type="submit" value="Save" id="save" name="save" class="btn btn-primary">Save
+                                Changes</button>    
 
-                    <a class="btn btn-secondary" href="productsedit.php?remove=true&product_id={$product_id}"
-                        role="button">Remove
-                    </a>
+                            <a class="btn btn-secondary" href="productsedit.php?remove=true&product_id={$product_id}"
+                                role="button">Remove
+                            </a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </form>
+            </form>
+
+
+
+            <br>
+            <table id="example" class="table table-striped table-bordered datatable">
+                <thead>
+                    <tr>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Store Name</th>
+                        <th scope="col">Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {$stock}
+
+                </tbody>
+            </table>
+            <br><br>
 
 
 
